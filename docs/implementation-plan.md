@@ -2,7 +2,7 @@
 
 Date: 15 September 2026. Status: local design draft, not a production launch.
 
-Implementation update: the owner confirmed no content is available yet and requested a skeleton. The accepted design is now implemented in `../site/` with directory-based URLs. The original draft below is preserved. See [verification](verification.md) and [maintenance / remaining content](maintenance.md). No publication has taken place.
+Implementation update: the owner confirmed no content is available yet and requested a skeleton. The accepted design is now implemented in `../site/` with directory-based URLs. The original draft below is preserved. See [verification](verification.md) and [maintenance / remaining content](maintenance.md). The owner subsequently approved a public GitHub Pages skeleton preview; final company launch remains pending.
 
 ## Agreed scope
 

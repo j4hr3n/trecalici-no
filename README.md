@@ -43,8 +43,8 @@ The self-hosted heading font includes Norwegian characters and its [SIL Open Fon
 
 [Deployment workflow](.github/workflows/pages.yml) runs on every push to `main`, or manually from Actions. It uploads only `site/`; draft files, docs and screenshots stay out of the deployed site. A small Python step prefixes root-relative HTML links with the Pages base path in a temporary upload copy, so `/trecalici-no/` works without changing local URLs. No site runtime or package dependencies are added.
 
-Expected URL once enabled: https://j4hr3n.github.io/trecalici-no/
+Preview URL: https://j4hr3n.github.io/trecalici-no/
 
-**Setup blocker:** GitHub currently rejects Pages enablement because the private repository's plan does not support it. The repository must become public, or its account must have a plan supporting Pages for private repositories. Then set Settings → Pages → Source to **GitHub Actions** and rerun the workflow. A private repository does not by itself make its Pages website private.
+The owner approved making the repository public. GitHub Pages is enabled with **GitHub Actions** as its source and HTTPS enforced. Both the preview and committed source (including draft and documentation) are public.
 
-Preview annotations, `noindex` and the non-deliverable email remain in place. This preview is not the final company launch. Every push to `main` publishes the current skeleton once Pages is enabled; use a separate branch for edits that should not be published yet.
+Preview annotations, `noindex` and the non-deliverable email remain in place. This preview is not the final company launch. Every push to `main` publishes the current skeleton; use a separate branch for edits that should not be published yet.

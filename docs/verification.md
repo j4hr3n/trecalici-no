@@ -46,4 +46,4 @@ Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that co
 
 The owner subsequently requested a hosted skeleton preview on pushes to `main`. The workflow YAML parses successfully, and its exact Python staging step was run with `/trecalici-no` as the base path. Every local HTML navigation and asset URL resolves within the staged site, including custom 404 links. Draft and documentation files are excluded from the deployment artifact. Source HTML is unchanged.
 
-GitHub's Pages API rejected enablement with HTTP 422: the current plan does not support Pages for this private repository. Deployment remains pending that account/visibility decision. The baseline font license files have an existing trailing space; they are preserved verbatim.
+GitHub's Pages API rejected enablement with HTTP 422: the current plan does not support Pages for this private repository. The owner subsequently approved making the repository public; visibility was changed and the Pages API successfully enabled workflow-based publishing with HTTPS enforced. The baseline font license files have an existing trailing space; they are preserved verbatim.

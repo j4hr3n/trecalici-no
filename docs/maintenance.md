@@ -8,7 +8,7 @@ The site is a review skeleton. Edit the HTML in `site/` directly; no build or ge
 2. Update the relevant page's `index.html`. Preserve `lang="nb"`, one `h1`, heading order, skip link, and `aria-current="page"` on its navigation link.
 3. Headers and footers are intentionally repeated. Apply shared navigation, logo, email and footer changes to all six pages and `404.html`.
 4. Preview using the README command. Check desktop and narrow mobile layouts, then follow the links you changed. Inspect email URLs without sending a message.
-5. Review the diff. The GitHub Pages workflow publishes only `site/` on pushes to `main` once Pages is enabled. Final company hosting remains undecided. Roll back by restoring the previous known-good files or hosting version.
+5. Review the diff. The GitHub Pages workflow publishes only `site/` on pushes to `main`. Final company hosting remains undecided. Roll back by restoring the previous known-good files or hosting version.
 
 ## Add the owner's content pack
 
@@ -76,6 +76,6 @@ Payments remain deferred. No framework, JavaScript, CMS, database, package depen
 
 The owner requested an online skeleton preview after the initial local review. `.github/workflows/pages.yml` handles pushes to `main` and manual runs. It uses GitHub's official configure, artifact-upload and deployment actions. A deployment-only copy receives the Pages URL prefix; original HTML stays usable at the local server root. CSS font paths are already relative. This also gives the custom 404 page correct navigation under the project URL.
 
-The repository is currently private, and GitHub rejected Pages enablement on the current plan. Resolve visibility or plan support, select **GitHub Actions** in the repository's Pages settings, then rerun the failed workflow or push to `main`. Changing repository visibility is a separate owner decision. See the [GitHub custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+The repository is public with the owner’s approval, and Pages is enabled using **GitHub Actions** with HTTPS enforced. Preview URL: https://j4hr3n.github.io/trecalici-no/. Push to `main` to deploy; use the workflow’s manual run or rerun option to retry a failed deployment. See the [GitHub custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-Keep preview labels and indexing restrictions until the final launch. Never put private source ZIPs or the manually emailed wine list in `site/`. If the repository is made public, everything committed (including docs and draft) is visible as source, even though only `site/` is deployed.
+Keep preview labels and indexing restrictions until the final launch. Never put private source ZIPs or the manually emailed wine list in `site/`. The repository is public: everything committed (including docs and draft) is visible as source, even though only `site/` is deployed.
