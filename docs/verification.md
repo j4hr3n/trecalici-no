@@ -39,7 +39,7 @@ Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that co
 - No producer PDFs or owner photos exist yet. No active PDF links were fabricated. Verify real files and captions after delivery.
 - The email URLs are structurally checked only. The real address, mail-client handoff and delivery remain unverified. Product-specific enquiry subjects await actual product names.
 - `/404.html` renders correctly; an unknown path returns HTTP 404 using Python's generic error page. The eventual host must map unknown paths to the custom page while preserving status 404.
-- Canonicals, sitemap, favicon and social preview await domain/branding decisions. No false domain has been inserted.
+- Canonicals, sitemap and social preview await domain/branding decisions. No false domain has been inserted. A provisional favicon (PNG set derived from the public circular Trecalici mark on trecalici.com) is linked from every page; re-check browser tab rendering and replace with approved branding later.
 - All pages retain noindex, crawling is disallowed, and preview annotations remain visible. Content, branding and launch blockers are listed in the [maintenance guide](maintenance.md). Nothing was published.
 
 ## GitHub Pages workflow follow-up

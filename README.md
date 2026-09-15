@@ -35,7 +35,7 @@ Final logo, slogan, real email, approved copy and photos, producers and their PD
 
 `katalog@example.invalid` cannot receive email. Preview email links demonstrate the prefilled message only. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
 
-All pages retain `noindex,nofollow`, a visible preview footer and explicit missing-content labels. `robots.txt` disallows crawling. These are indexing hints, not access control; the preview contains only the intentionally public skeleton, not confidential material. Canonicals, sitemap, favicon and social image await the approved domain and branding.
+All pages retain `noindex,nofollow`, a visible preview footer and explicit missing-content labels. `robots.txt` disallows crawling. These are indexing hints, not access control; the preview contains only the intentionally public skeleton, not confidential material. Canonicals, sitemap and social image await the approved domain and branding. A provisional favicon generated from the public circular Trecalici mark is in place.
 
 The self-hosted heading font includes Norwegian characters and its [SIL Open Font License](site/assets/fonts/OFL.txt). Only `site/` is intended for eventual hosting; source ZIPs, draft files and review screenshots must stay outside it.
 
