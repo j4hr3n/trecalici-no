@@ -1,0 +1,177 @@
+{
+  "browser": "139.0.7258.5",
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/sjelden-vin/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/produsenter/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/vinglass/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/kaviar/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/om-oss/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/404.html",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/sjelden-vin/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/produsenter/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/vinglass/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/kaviar/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/om-oss/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/404.html",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/sjelden-vin/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/produsenter/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/vinglass/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/kaviar/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/om-oss/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/404.html",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/sjelden-vin/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/produsenter/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/vinglass/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/kaviar/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/om-oss/",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "route": "/404.html",
+      "width": 320,
+      "passed": true
+    }
+  ],
+  "links": [
+    "/sjelden-vin/",
+    "/produsenter/",
+    "/vinglass/",
+    "/kaviar/",
+    "/om-oss/",
+    "/"
+  ],
+  "emails": [
+    {
+      "recipient": "katalog@example.invalid",
+      "subject": "Forespørsel om vinliste",
+      "body": "Hei!\r\n\r\nJeg ønsker å få tilsendt den oppdaterte vinlisten deres.\r\n\r\nNavn:\r\nPrivatkunde / bedrift:\r\n\r\nVennlig hilsen\r\n"
+    },
+    {
+      "recipient": "katalog@example.invalid",
+      "subject": "Forespørsel om vinglass fra Sophienwald",
+      "body": "Hei!\r\n\r\nJeg ønsker mer informasjon om vinglass fra Sophienwald.\r\n\r\nVennlig hilsen\r\n"
+    },
+    {
+      "recipient": "katalog@example.invalid",
+      "subject": "Forespørsel om kaviar fra Giaveri",
+      "body": "Hei!\r\n\r\nJeg ønsker mer informasjon om kaviar fra Giaveri.\r\n\r\nVennlig hilsen\r\n"
+    },
+    {
+      "recipient": "katalog@example.invalid",
+      "subject": "Kontakt med Trecalici Norge",
+      "body": "Hei!\r\n\r\n"
+    }
+  ],
+  "errors": [],
+  "pdfStatus": "No PDFs supplied; no active PDF links exist."
+}
