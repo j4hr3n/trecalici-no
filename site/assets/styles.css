@@ -6,6 +6,13 @@
   font-display: swap;
 }
 
+/* Smooth cross-document navigation (View Transitions API). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
 :root {
   color-scheme: dark;
   --bg: #151515;
