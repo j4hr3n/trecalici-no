@@ -161,8 +161,9 @@ nav a:hover { text-decoration: underline; }
 .request .review-note { font-size: .8125rem; }
 .constrained { max-width: 620px; margin-top: 30px; }
 .producer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; margin-top: 60px; align-items: start; }
-.producer.text-only { grid-template-columns: minmax(0, 1fr); gap: 0; }
-.producer.text-only > * { max-width: 760px; }
+main > .producer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 60px 60px; }
+main > .producer-list .producer { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 0; }
+main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
 .producer p:not(.eyebrow) { color: var(--muted); }
 .placeholder {
   display: grid;
@@ -220,6 +221,7 @@ address { font-style: normal; }
   .request { padding: 27px 24px; }
   .request h2 { font-size: 2.0625rem; }
   .producer, .products { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 35px; }
+  main > .producer-list { grid-template-columns: minmax(0, 1fr); gap: 35px; }
   .placeholder { min-height: 230px; }
   .products .placeholder, .product-image { height: 260px; }
   .country { margin-top: 5px; }
