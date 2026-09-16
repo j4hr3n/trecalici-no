@@ -16,6 +16,7 @@
 :root {
   color-scheme: dark;
   background: var(--bg);
+  scrollbar-gutter: stable;
   --bg: #151515;
   --text: #f5efe8;
   --muted: #b6aea3;
