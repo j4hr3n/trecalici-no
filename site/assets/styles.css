@@ -161,6 +161,8 @@ nav a:hover { text-decoration: underline; }
 .request .review-note { font-size: .8125rem; }
 .constrained { max-width: 620px; margin-top: 30px; }
 .producer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; margin-top: 60px; align-items: start; }
+.producer.text-only { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.producer.text-only > * { max-width: 760px; }
 .producer p:not(.eyebrow) { color: var(--muted); }
 .placeholder {
   display: grid;
