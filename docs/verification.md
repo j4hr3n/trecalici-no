@@ -42,6 +42,10 @@ Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that co
 - Canonicals, sitemap and social preview await domain/branding decisions. No false domain has been inserted. A provisional favicon (PNG set derived from the public circular Trecalici mark on trecalici.com) is linked from every page; re-check browser tab rendering and replace with approved branding later.
 - All pages retain noindex, crawling is disallowed, and preview annotations remain visible. Content, branding and launch blockers are listed in the [maintenance guide](maintenance.md). Nothing was published.
 
+## Email capture forms follow-up
+
+After this snapshot, the three product pages gained FormSubmit-backed email capture forms (owner notification + visitor auto-response) and a `/takk/` confirmation page; om oss keeps its `mailto:` contact. The "no forms" line above therefore no longer describes the current state. The forms still point at the non-deliverable placeholder address, so live submission and delivery remain unverified. Form rendering, consent checkbox, honeypot and the JavaScript-injected `/takk/` redirect need a fresh pass in Chromium and Safari at the usual widths before launch.
+
 ## GitHub Pages workflow follow-up
 
 The owner subsequently requested a hosted skeleton preview on pushes to `main`. The workflow YAML parses successfully, and its exact Python staging step was run with `/trecalici-no` as the base path. Every local HTML navigation and asset URL resolves within the staged site, including custom 404 links. Draft and documentation files are excluded from the deployment artifact. Source HTML is unchanged.

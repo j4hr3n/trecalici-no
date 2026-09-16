@@ -7,8 +7,9 @@ The site is a review skeleton. Edit the HTML in `site/` directly; no build or ge
 1. Save or commit a known-good copy before editing. The initial workspace was untracked; create a baseline commit when ready.
 2. Update the relevant page's `index.html`. Preserve `lang="nb"`, one `h1`, heading order, skip link, and `aria-current="page"` on its navigation link.
 3. Headers and footers are intentionally repeated. Apply shared navigation, logo, email and footer changes to all six pages and `404.html`.
-4. Preview using the README command. Check desktop and narrow mobile layouts, then follow the links you changed. Inspect email URLs without sending a message.
+4. Preview using the README command. Check desktop and narrow mobile layouts, then follow the links you changed. Inspect form actions and subjects without submitting.
 5. Review the diff. The GitHub Pages workflow publishes only `site/` on pushes to `main`. Final company hosting remains undecided. Roll back by restoring the previous known-good files or hosting version.
+6. The three product forms also appear in routine checks: confirm the `action` addresses, consent checkboxes and the `/takk/` confirmation page still resolve. Do not submit real forms to the placeholder address.
 
 ## Add the owner's content pack
 
@@ -39,13 +40,25 @@ Use the actual filename, dimensions and description. Product photos use `object-
 
 Replace the `.wordmark` crop and provisional image on every page with final artwork. Update dimensions and `.brand` styling to suit it. Remove separate `Norge` text if already included in the artwork. Delete the provisional image after replacing every reference.
 
-### Email and wine list
+### Email capture forms and wine list
 
-Replace every `katalog@example.invalid` in `site/` with the confirmed address, both in `href` and visible text. Remove related preview notes after checking the replacement. Current messages have percent-encoded subjects, Bokmål text and CRLF line breaks.
+The three product pages collect visitor emails with plain HTML forms posted to [FormSubmit](https://formsubmit.co/), a free form-to-email service that needs no account, API key or hosting change:
 
-The wine-list link opens the visitor's email program. The visitor sends it there; the owner manually replies with the latest private attachment. The website cannot confirm sending. Keep the wine list outside the public site.
+- Sjelden vin: sends the wine list. Subject `Forespørsel om vinliste — Trecalici Norge`.
+- Vinglass: enquiry about Sophienwald glasses. Subject `Forespørsel om vinglass fra Sophienwald — Trecalici Norge`.
+- Kaviar: enquiry about Giaveri caviar. Subject `Forespørsel om kaviar fra Giaveri — Trecalici Norge`.
 
-Product enquiry links currently name the brand/category. When actual products arrive, put an enquiry link in each product article with its actual name in the subject and body. Encode subject/body with a URL encoder; write `&amp;` between HTML query parameters. Keep the real address visible as the fallback. No form, automatic delivery or payment integration is needed.
+Each submission emails the owner (table template, subject names the interest) and FormSubmit instantly auto-responds to the visitor with a Bokmål confirmation via the form's `_autoresponse` field. Om oss intentionally keeps its manual `mailto:` contact.
+
+Every form points its `action` at `https://formsubmit.co/katalog@example.invalid`, a deliberately non-deliverable placeholder. To activate:
+
+1. Replace `katalog@example.invalid` in the three `action` attributes with the confirmed receiving address.
+2. Deploy, submit one form on the live site, and click the confirmation link FormSubmit emails to that address. This is a one-time activation per receiving address.
+3. Keep the required consent checkbox and the hidden `_honey` honeypot in each form. Forms rely on FormSubmit's reCAPTCHA (default, enabled); note that `_autoresponse` stops working if reCAPTCHA is disabled or the form is submitted via AJAX.
+
+After a successful submission FormSubmit redirects to `/takk/`. `assets/nav.js` injects that absolute redirect URL (`_next`) at runtime, derived from the script's own URL, so it resolves both at the site root and under the GitHub Pages base path. Without JavaScript, FormSubmit shows its own thank-you page instead. Keep the wine list outside the public site; the owner replies manually with the private attachment. A data-processing/privacy review for the collected emails is still pending before launch.
+
+Product enquiry copy currently names the brand/category. When actual products arrive, put an enquiry form or link in each product article with its actual name.
 
 ### Producer PDFs
 

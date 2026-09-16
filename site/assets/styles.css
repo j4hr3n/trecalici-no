@@ -155,6 +155,23 @@ nav a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .button:hover { color: var(--bg); background: #fff; text-decoration: underline; }
+button.button { width: 100%; border: 0; cursor: pointer; font-family: var(--sans); }
+.signup label { display: block; margin: 18px 0 6px; font-size: .8125rem; color: var(--muted); }
+.signup input[type="email"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--text);
+  font: 1rem/1.4 var(--sans);
+}
+.signup input[type="email"]:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.signup .consent { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0 0; }
+.signup .consent input { width: 16px; height: 16px; margin: 4px 0 0; flex-shrink: 0; accent-color: var(--text); }
+.signup .button { margin: 18px 0 12px; }
+.contact .signup { max-width: 420px; }
 .request .small, .small { font-size: .8125rem; }
 .email { overflow-wrap: anywhere; }
 .review-note { font-size: .8125rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; margin-top: 30px; }

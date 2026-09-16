@@ -22,6 +22,7 @@ Open [the local preview](http://127.0.0.1:4174/). Serve `site/` as the web root:
 | Vinglass | [site/vinglass/index.html](site/vinglass/index.html) |
 | Kaviar | [site/kaviar/index.html](site/kaviar/index.html) |
 | Om oss | [site/om-oss/index.html](site/om-oss/index.html) |
+| Takk (form confirmation) | [site/takk/index.html](site/takk/index.html) |
 
 - [Maintenance and content guide](docs/maintenance.md)
 - [Verification results](docs/verification.md)
@@ -33,7 +34,7 @@ Open [the local preview](http://127.0.0.1:4174/). Serve `site/` as the web root:
 
 Final logo, slogan, real email, approved copy and photos, producers and their PDFs, actual products/specifications/prices, team and company details, domain and hosting. Content edits are developer-managed for now; long-term ownership remains undecided.
 
-`katalog@example.invalid` cannot receive email. Preview email links demonstrate the prefilled message only. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
+`katalog@example.invalid` cannot receive email. The three product pages post email-capture forms to [FormSubmit](https://formsubmit.co/) pointed at that placeholder address, so they cannot submit anything yet. Om oss keeps a plain `mailto:` link with the placeholder. See the [maintenance guide](docs/maintenance.md) for activation steps. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
 
 All pages retain `noindex,nofollow`, a visible preview footer and explicit missing-content labels. `robots.txt` disallows crawling. These are indexing hints, not access control; the preview contains only the intentionally public skeleton, not confidential material. Canonicals, sitemap and social image await the approved domain and branding. A provisional favicon generated from the public circular Trecalici mark is in place.
 

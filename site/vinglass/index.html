@@ -62,9 +62,19 @@
     </section>
     <section class="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Spørsmål om vinglass?</h2>
-      <a class="button" href="mailto:katalog@example.invalid?subject=Foresp%C3%B8rsel%20om%20vinglass%20fra%20Sophienwald&amp;body=Hei%21%0D%0A%0D%0AJeg%20%C3%B8nsker%20mer%20informasjon%20om%20vinglass%20fra%20Sophienwald.%0D%0A%0D%0AVennlig%20hilsen%0D%0A" aria-describedby="email-note">Send en forespørsel <span aria-hidden="true">↗</span></a>
-      <p class="small">Åpner e-postprogrammet ditt. Du kan også kopiere adressen: <span class="email">katalog@example.invalid</span></p>
-      <p id="email-note" class="review-note">Forhåndsvisning: Adressen kan ikke motta e-post. Produkter, bilder, spesifikasjoner og priser må leveres. Prisgrunnlag, inkludert merverdiavgift og enhet, må avklares.</p>
+      <p>Legg igjen e-postadressen din, så kontakter vi deg med mer informasjon om vinglass fra Sophienwald.</p>
+      <form class="signup" data-next="takk/" action="https://formsubmit.co/katalog@example.invalid" method="POST" accept-charset="utf-8">
+        <input type="hidden" name="_subject" value="Forespørsel om vinglass fra Sophienwald — Trecalici Norge">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Hei! Takk for din interesse for Trecalici Norge. Vi har mottatt forespørselen din og kontakter deg med mer informasjon om vinglass fra Sophienwald. — Trecalici Norge">
+        <label for="epost">E-postadresse</label>
+        <input type="email" id="epost" name="email" required autocomplete="email">
+        <label class="consent"><input type="checkbox" name="samtykke" value="ja" required> Jeg samtykker til at Trecalici Norge kan kontakte meg på denne e-postadressen om vinglass.</label>
+        <p hidden><label>La dette feltet stå tomt<input type="text" name="_honey"></label></p>
+        <button class="button" type="submit">Få mer informasjon <span aria-hidden="true">↗</span></button>
+        <p class="small">Du får automatisk bekreftelse på e-post, og vi svarer deg manuelt.</p>
+      </form>
+      <p class="review-note">Forhåndsvisning: Skjemaet peker på en plassholder-adresse og kan ikke sende noe. Produkter, bilder, spesifikasjoner og priser må leveres. Prisgrunnlag, inkludert merverdiavgift og enhet, må avklares.</p>
     </section>
   </main>
   <footer class="footer">
