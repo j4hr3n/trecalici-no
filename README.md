@@ -1,6 +1,6 @@
 # Trecalici Norge
 
-Six-page static website skeleton, preserving the accepted design draft. Norwegian Bokmål, plain HTML and one shared CSS file. No JavaScript, packages or build step.
+Six-page static website skeleton, preserving the accepted design draft. Norwegian Bokmål, plain HTML, one shared CSS file, and one small progressive-enhancement navigation script (assets/nav.js). No packages or build step.
 
 **Status:** review skeleton. The owner confirmed no content pack is available yet and requested a GitHub Pages preview. Final content and production launch are still pending.
 

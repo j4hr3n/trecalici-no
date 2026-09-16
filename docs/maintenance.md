@@ -70,7 +70,7 @@ Use the actual filename and producer name. Open in the same tab so ordinary Back
 - Only for the completed approved launch: remove `noindex,nofollow`, replace the preview footer with approved company details, remove preview notes, and update `robots.txt` to allow crawling and reference the real sitemap. Robots and noindex do not protect confidential material.
 - Recheck Chromium and Safari, keyboard navigation, 320/390px mobile and tablet layouts, actual image loading, PDFs and decoded email messages. Check public HTTPS URLs after launch.
 
-Payments remain deferred. No framework, JavaScript, CMS, database, package dependencies or build pipeline is needed for these edits.
+Payments remain deferred. No framework, CMS, database, package dependencies or build pipeline is needed for these edits; the only script is assets/nav.js.
 
 ## GitHub Pages deployment
 
