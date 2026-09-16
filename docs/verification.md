@@ -47,3 +47,9 @@ Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that co
 The owner subsequently requested a hosted skeleton preview on pushes to `main`. The workflow YAML parses successfully, and its exact Python staging step was run with `/trecalici-no` as the base path. Every local HTML navigation and asset URL resolves within the staged site, including custom 404 links. Draft and documentation files are excluded from the deployment artifact. Source HTML is unchanged.
 
 GitHub's Pages API rejected enablement with HTTP 422: the current plan does not support Pages for this private repository. The owner subsequently approved making the repository public; visibility was changed and the Pages API successfully enabled workflow-based publishing with HTTPS enforced. The baseline font license files have an existing trailing space; they are preserved verbatim.
+
+## Addendum — Giaveri producer content on the kaviar page (16 September 2026)
+
+The owner asked for producer information and images to be pulled from caviargiaveri.com into `site/kaviar/`. Text was translated to Bokmål from the about-us page (location wording from the sturgeon-farm page), and three images from the producer's site were saved under `site/assets/images/`: `giaveri-storfarm.jpg`, `giaveri-kaviarboks.jpg` and `giaveri-stor.jpg`. Approval from owner and producer is still pending for this borrowed content. Product names, photos, variants, sizes, prices and price basis remain to be supplied, so the product placeholders stay in place.
+
+Re-checked with Chromium (Playwright build 139.0.7258.5): no horizontal overflow at 1440, 768, 390 and 320px, no console or page errors, all page images load, one h1 with valid heading order, lazy loading only on below-the-fold photos. The kaviar screenshots in `site-previews/` were regenerated at all four widths. Other pages are unchanged.
