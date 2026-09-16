@@ -5,23 +5,20 @@
   if (!('fetch' in window) || !window.DOMParser) return;
 
   history.scrollRestoration = 'manual';
-  const reduceMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let latest = 0;
 
-  const syncChrome = (doc) => {
-    const curMain = document.querySelector('main');
-    const newHeader = doc.querySelector('header.header');
-    const curHeader = document.querySelector('header.header');
-    if (newHeader && curHeader) curHeader.replaceWith(newHeader);
-    else if (newHeader) curMain.parentNode.insertBefore(newHeader, curMain);
-    else if (curHeader) curHeader.remove();
-  };
+  const reduceMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const swap = (doc, pop) => {
     const newMain = doc.querySelector('main');
     const curMain = document.querySelector('main');
     if (!newMain || !curMain) return false;
     const run = () => {
-      syncChrome(doc);
+      const newHeader = doc.querySelector('header.header');
+      const curHeader = document.querySelector('header.header');
+      if (newHeader && curHeader) curHeader.replaceWith(newHeader);
+      else if (newHeader) curMain.parentNode.insertBefore(newHeader, curMain);
+      else if (curHeader) curHeader.remove();
       curMain.replaceWith(newMain);
       document.title = doc.title;
       const path = location.pathname;
@@ -40,14 +37,16 @@
   };
 
   const navigate = async (url, pop) => {
+    const token = ++latest;
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+      if (token !== latest) return;
       if (!swap(doc, pop)) throw new Error('no main element');
       if (!pop) history.pushState({ scroll: 0 }, '', url);
     } catch (err) {
-      if (!pop) location.href = url;
+      if (!pop && token === latest) location.href = url;
     }
   };
 
