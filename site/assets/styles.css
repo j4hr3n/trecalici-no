@@ -15,6 +15,7 @@
 
 :root {
   color-scheme: dark;
+  background: var(--bg);
   --bg: #151515;
   --text: #f5efe8;
   --muted: #b6aea3;
