@@ -40,11 +40,19 @@
       <section class="request" aria-labelledby="request-title">
         <p class="eyebrow">Ta kontakt</p>
         <h2 id="request-title">Få tilsendt vinlisten</h2>
-        <p>Send oss en forespørsel, så svarer vi manuelt med den oppdaterte listen.</p>
-        <a class="button" href="mailto:katalog@example.invalid?subject=Foresp%C3%B8rsel%20om%20vinliste&amp;body=Hei%21%0D%0A%0D%0AJeg%20%C3%B8nsker%20%C3%A5%20f%C3%A5%20tilsendt%20den%20oppdaterte%20vinlisten%20deres.%0D%0A%0D%0ANavn%3A%0D%0APrivatkunde%20%2F%20bedrift%3A%0D%0A%0D%0AVennlig%20hilsen%0D%0A" aria-describedby="email-note">Få tilsendt vinlisten <span aria-hidden="true">↗</span></a>
-        <p class="small">Åpner e-postprogrammet ditt. Du sender forespørselen derfra.</p>
-        <p class="small">Du kan også kopiere adressen:<br><span class="email">katalog@example.invalid</span></p>
-        <p id="email-note" class="review-note">Forhåndsvisning: Adressen er en plassholder og kan ikke motta e-post.</p>
+        <p>Legg igjen e-postadressen din, så sender vi deg den gjeldende vinlisten.</p>
+        <form class="signup" data-next="takk/" action="https://formsubmit.co/squares-cabinet.1g@icloud.com" method="POST" accept-charset="utf-8">
+          <input type="hidden" name="_subject" value="Forespørsel om vinliste — Trecalici Norge">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="Hei! Takk for din interesse for Trecalici Norge. Vi har mottatt forespørselen din og sender deg den gjeldende vinlisten så snart den er klar. — Trecalici Norge">
+          <label for="epost">E-postadresse</label>
+          <input type="email" id="epost" name="email" required autocomplete="email">
+          <label class="consent"><input type="checkbox" name="samtykke" value="ja" required> Jeg samtykker til at Trecalici Norge kan kontakte meg på denne e-postadressen om vinlisten.</label>
+          <p hidden><label>La dette feltet stå tomt<input type="text" name="_honey"></label></p>
+          <button class="button" type="submit">Få tilsendt vinlisten <span aria-hidden="true">↗</span></button>
+          <p class="small">Du får automatisk bekreftelse på e-post. Vi svarer deretter manuelt med den oppdaterte listen.</p>
+        </form>
+        <p class="review-note">Testoppsett: Skjemaet sender til en midlertidig adresse til testing. Det aktiveres ved å bekrefte e-posten fra FormSubmit etter første innsending.</p>
       </section>
     </div>
     <!-- Replace with an approved, factual image only if appropriate for this page. -->
