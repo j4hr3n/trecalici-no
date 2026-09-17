@@ -70,8 +70,16 @@ Design review of `/produsenter/` led to: producer logo images removed from the p
 
 Re-checked in Chromium (Playwright): one h1 with 19 h2 headings in order, no horizontal overflow at 1440/768/390/320px, no console errors, all images load (page now ships a single header image; ~700 KB of producer PNGs no longer downloaded), `details` toggles open and closed with correct summary colour/indicator change, and the kaviar page still renders its two-column producer sections correctly after the shared-CSS simplification. Main height on mobile dropped from about 10,900px to 7,400px.
 
+## Resend integration — 2026-09-17
+
+Replaces FormSubmit with four same-page forms and a standalone Cloudflare Worker. `node --test tests/contact.test.mjs` passes six tests covering two-message routing, payload-bound retry keys, input/origin rejection, CAPTCHA hostname/action checks, upstream failures, HTML escaping and missing configuration. JavaScript syntax and `git diff --check` pass.
+
+A temporary JSDOM 26 harness evaluated the actual frontend script and HTML with mocked Turnstile/fetch: token gating, success, stable retry IDs, form initialization after navigation, preserved message text after network failure, and form/script/fallback presence on all four pages passed. This is DOM simulation, not visual browser QA. No computer control was used. Live Worker deployment, actual Turnstile and inbox delivery remain unverified; no real email was sent. See `docs/resend-setup.md` for deployment order and manual checks.
+
 ## Addendum — Consistent producer overview rows (17 September 2026)
 
 Replaced the two-column biography cards with a single list of producer rows. Desktop rows align the region/name, a short introduction, and the disclosure control in consistent columns. Mobile rows stack these elements. Each introduction is a complete sentence; expanding “Les mer” reveals the complete original biography, and the control changes to “Les mindre”. All 19 names remain h2 headings, and the disclosure controls include the producer name for assistive technology. Native details/summary works without JavaScript.
 
 Verified in Chromium at 1440, 768, 390 and 320px with JavaScript disabled: aligned heading and control positions, 19 producers, keyboard Enter/Space opening and closing, correct expanded labels, and no horizontal overflow with every biography open or at 200% root text size. All original biography paragraphs were compared against the previous version and preserved. Regenerated all four producer screenshots and visually reviewed desktop/mobile. Safari and physical devices were not tested in this pass.
+
+Resend deployment follow-up: owner deployed the Worker; its version-1 health response and GitHub Pages CORS preflight were verified over HTTPS on 2026-09-17. Actual Turnstile validation and inbox delivery still await a manual submission.
