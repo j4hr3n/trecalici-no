@@ -1,19 +1,3 @@
-/* Form enhancement: build an absolute thank-you URL from the script's own
-   location so it works at the site root and under a hosting base path.
-   Without JavaScript the form backend shows its own thank-you page. */
-(() => {
-  const script = document.currentScript;
-  if (!script || !script.src) return;
-  const base = new URL('../', script.src);
-  document.querySelectorAll('form.signup[data-next]').forEach((form) => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = '_next';
-    input.value = new URL(form.dataset.next, base).href;
-    form.append(input);
-  });
-})();
-
 /* Progressive enhancement: swap page content in place so shared chrome
    (header, footer) never repaints. Falls back to full navigation when
    fetch/parse fails or the script does not run. */
@@ -36,6 +20,7 @@
       else if (newHeader) curMain.parentNode.insertBefore(newHeader, curMain);
       else if (curHeader) curHeader.remove();
       curMain.replaceWith(newMain);
+      document.dispatchEvent(new Event('trecalici:navigated'));
       document.title = doc.title;
       const path = location.pathname;
       document.querySelectorAll('nav a').forEach((a) => {

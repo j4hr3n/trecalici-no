@@ -162,7 +162,7 @@ nav a:hover { text-decoration: underline; }
 .button:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
 button.button { width: 100%; cursor: pointer; font-family: var(--sans); }
 .signup label { display: block; margin: 18px 0 6px; font-size: .8125rem; color: var(--muted); }
-.signup input[type="email"] {
+.signup input[type="email"], .signup textarea {
   width: 100%;
   min-height: 48px;
   padding: 10px 14px;
@@ -172,7 +172,7 @@ button.button { width: 100%; cursor: pointer; font-family: var(--sans); }
   color: var(--text);
   font: 1rem/1.4 var(--sans);
 }
-.signup input[type="email"]:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.signup input[type="email"]:focus-visible, .signup textarea:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 .signup .consent { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0 0; }
 .signup .consent input { width: 16px; height: 16px; margin: 4px 0 0; flex-shrink: 0; accent-color: var(--text); }
 .signup .button { margin: 18px 0 12px; }
@@ -252,3 +252,9 @@ address { font-style: normal; }
   .product-image { height: 260px; }
   .country { margin-top: 5px; }
 }
+
+.signup textarea { resize: vertical; }
+.signup [data-turnstile] { margin-top: 18px; min-width: 0; }
+.signup .form-status:empty { display: none; }
+.signup .form-status { margin-top: 14px; }
+.signup button:disabled { opacity: .55; cursor: wait; }

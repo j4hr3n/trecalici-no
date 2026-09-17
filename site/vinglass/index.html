@@ -12,6 +12,7 @@
   <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <script src="/assets/nav.js" defer></script>
+  <script src="/assets/forms.js" defer></script>
 </head>
 <body class="inner">
   <a class="skip" href="#innhold">Hopp til innhold</a>
@@ -189,17 +190,18 @@
     <section class="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Spørsmål om vinglass?</h2>
       <p>Legg igjen e-postadressen din, så kontakter vi deg med mer informasjon om vinglass fra Sophienwald.</p>
-      <form class="signup" data-next="takk/" action="https://formsubmit.co/squares-cabinet.1g@icloud.com" method="POST" accept-charset="utf-8">
-        <input type="hidden" name="_subject" value="Forespørsel om vinglass fra Sophienwald · Trecalici Norge">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_autoresponse" value="Hei! Takk for din interesse for Trecalici Norge. Vi har mottatt forespørselen din og kontakter deg med mer informasjon om vinglass fra Sophienwald. Med vennlig hilsen Trecalici Norge">
+      <form class="signup" data-contact="vinglass" action="https://trecalici-contact.christofferjahren.workers.dev/contact" method="POST">
         <label for="epost">E-postadresse</label>
-        <input type="email" id="epost" name="email" required autocomplete="email">
+        <input type="email" id="epost" name="email" maxlength="254" required autocomplete="email">
         <label class="consent"><input type="checkbox" name="samtykke" value="ja" required> Jeg samtykker til at Trecalici Norge kan kontakte meg på denne e-postadressen om vinglass.</label>
         <p hidden><label>La dette feltet stå tomt<input type="text" name="_honey"></label></p>
-        <button class="button" type="submit">Få mer informasjon</button>
+        <div data-turnstile></div>
+          <p class="small form-status" role="status" aria-live="polite"></p>
+          <button class="button" type="submit" disabled>Få mer informasjon</button>
         <p class="small">Du får automatisk bekreftelse på e-post, og vi svarer deg manuelt.</p>
-      </form>
+      <noscript><p class="small">Slå på JavaScript for å bruke skjemaet.</p></noscript>
+          <p class="small">Du kan også <a href="mailto:robot-slump-6x@icloud.com">kontakte oss på e-post</a>.</p>
+        </form>
     </section>
   </main>
   <footer class="footer">

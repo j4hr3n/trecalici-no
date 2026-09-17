@@ -9,7 +9,7 @@ The site is a review skeleton. Edit the HTML in `site/` directly; no build or ge
 3. Headers and footers are intentionally repeated. Apply shared navigation, logo, email and footer changes to all six pages and `404.html`.
 4. Preview using the README command. Check desktop and narrow mobile layouts, then follow the links you changed. Inspect form actions and subjects without submitting.
 5. Review the diff. The GitHub Pages workflow publishes only `site/` on pushes to `main`. Final company hosting remains undecided. Roll back by restoring the previous known-good files or hosting version.
-6. The three product forms also appear in routine checks: confirm the `action` addresses, consent checkboxes and the `/takk/` confirmation page still resolve. Do not submit real forms to the placeholder address.
+6. The three product forms also appear in routine checks: confirm the form endpoint, consent checkboxes, Turnstile and on-page status messages work. Do not submit real forms to the placeholder address.
 
 ## Add the owner's content pack
 
@@ -42,25 +42,11 @@ Replace the `.wordmark` crop and provisional image on every page with final artw
 
 ### Email capture forms and wine list
 
-The three product pages collect visitor emails with plain HTML forms posted to [FormSubmit](https://formsubmit.co/), a free form-to-email service that needs no account, API key or hosting change:
+The product forms and the general contact form submit to the Resend-backed Cloudflare Worker. See [Resend deployment instructions](resend-setup.md) for configuration, deployment order and testing. `site/assets/forms.js` contains only the public endpoint and Turnstile site key. All email credentials and sender/recipient settings live in Cloudflare.
 
-- Sjelden vin: sends the wine list. Subject `Forespørsel om vinliste — Trecalici Norge`.
-- Vinglass: enquiry about Sophienwald glasses. Subject `Forespørsel om vinglass fra Sophienwald — Trecalici Norge`.
-- Kaviar: enquiry about Giaveri caviar. Subject `Forespørsel om kaviar fra Giaveri — Trecalici Norge`.
+Forms stay on the page and show loading, success or retry feedback. Turnstile widgets are initialized on initial load and after the site's in-place navigation. Email links are available if JavaScript or the service fails. The wine list remains private and is sent manually; the Worker only acknowledges the request.
 
-Each submission emails the owner (table template, subject names the interest) and FormSubmit instantly auto-responds to the visitor with a Bokmål confirmation via the form's `_autoresponse` field. Om oss intentionally keeps its manual `mailto:` contact.
-
-Every form points its `action` at `https://formsubmit.co/squares-cabinet.1g@icloud.com`, a temporary address set up for testing; om oss uses the same address in its `mailto:` link. To activate the forms:
-
-1. Deploy, submit one form on the live site, and click the confirmation link FormSubmit emails to that address. This is a one-time activation per receiving address.
-2. Submit again to confirm both the owner notification and the visitor auto-response arrive.
-3. Before launch, replace the temporary address with the confirmed receiving address in the three `action` attributes and the om-oss `mailto:` link, then repeat activation for the new address.
-
-Keep the required consent checkbox and the hidden `_honey` honeypot in each form. Forms rely on FormSubmit's reCAPTCHA (default, enabled); note that `_autoresponse` stops working if reCAPTCHA is disabled or the form is submitted via AJAX.
-
-After a successful submission FormSubmit redirects to `/takk/`. `assets/nav.js` injects that absolute redirect URL (`_next`) at runtime, derived from the script's own URL, so it resolves both at the site root and under the GitHub Pages base path. Without JavaScript, FormSubmit shows its own thank-you page instead. Keep the wine list outside the public site; the owner replies manually with the private attachment. A data-processing/privacy review for the collected emails is still pending before launch.
-
-Product enquiry copy currently names the brand/category. When actual products arrive, put an enquiry form or link in each product article with its actual name.
+Keep consent checkboxes and honeypots. Update the receiving mailbox in Cloudflare (`MAIL_TO`) and the public fallback links together. Do not use a visitor's email as the sender; use it as Reply-To on owner notifications. A data-processing/privacy review remains pending before launch.
 
 ### Producer PDFs
 
@@ -89,7 +75,7 @@ Producers appear alphabetically. Andrea Moser is labelled «Italia (IT)» rather
 - Only for the completed approved launch: remove `noindex,nofollow`, replace the preview footer with approved company details, remove preview notes, and update `robots.txt` to allow crawling and reference the real sitemap. Robots and noindex do not protect confidential material.
 - Recheck Chromium and Safari, keyboard navigation, 320/390px mobile and tablet layouts, actual image loading, PDFs and decoded email messages. Check public HTTPS URLs after launch.
 
-Payments remain deferred. No framework, CMS, database, package dependencies or build pipeline is needed for these edits; the only script is assets/nav.js.
+Payments remain deferred. No framework, CMS, database, package dependencies or build pipeline is needed for these edits; shared scripts are assets/nav.js and assets/forms.js.
 
 ## GitHub Pages deployment
 
