@@ -61,7 +61,7 @@ export async function handle(request, env, fetcher = fetch) {
     const result = await verification.json();
     if (!result.success || result.action !== 'contact' || result.hostname !== new URL(origin).hostname) return reply(403, { error: 'verification' });
     const [subject, followup] = TOPICS[topic];
-    const ownerText = `Ny forespørsel: ${subject}\n\nE-post: ${email}\nSamtykke til oppfølging: ja${message ? `\n\nMelding:\n${message}` : ''}`;
+    const ownerText = `Ny forespørsel: ${subject}\n\nE-post: ${email}${message ? `\n\nMelding:\n${message}` : ''}`;
     // Never echo arbitrary visitor text in the confirmation email.
     const visitorText = `Hei!\n\nTakk for din henvendelse til Trecalici Norge. Vi har mottatt forespørselen din. ${followup}\n\nDu kan svare på denne e-posten hvis du vil legge til noe.\n\nMed vennlig hilsen\nTrecalici Norge`;
     const batch = [
