@@ -209,7 +209,7 @@ main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
 .collection .products { margin-top: 35px; }
 .collection h2 { margin-bottom: 12px; }
 .product-image { height: 300px; margin-bottom: 25px; }
-.product-image { width: 100%; object-fit: contain; background: var(--panel); }
+.product-image { width: 100%; object-fit: contain; }
 .products h2 { font-size: 1.9375rem; margin-bottom: 16px; }
 .specs { margin: 0 0 20px; font-size: .875rem; }
 .specs > div { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
