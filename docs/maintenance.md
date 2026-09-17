@@ -19,7 +19,7 @@ Keep ZIPs and original photos outside `site/`. Confirm rights, names, captions a
 | --- | --- |
 | Homepage | Approved transparent logo and final slogan |
 | Sjelden vin | Brief approved introduction, appropriate approved imagery, real email |
-| Produsentene våre | One article per confirmed producer: name, location, photo, description, wine information and catalogue PDF |
+| Produsentene våre | One article per confirmed producer: name, region, short presentation with expandable full text (`details`/`summary`) and catalogue PDF |
 | Vinglass | Sophienwald introduction; actual model names, photos, volume, height, pack quantity, price and price basis |
 | Kaviar | Giaveri introduction; actual names, photos, variants, sizes/net weights, prices and price basis |
 | Om oss | Team photo/names, story, vision and final email/contact details. Registered company details (Trecalici AS, org.nr 937 578 245) are already in place, sourced from Enhetsregisteret; the street address is deliberately not shown |
@@ -64,7 +64,7 @@ Product enquiry copy currently names the brand/category. When actual products ar
 
 ### Producer PDFs
 
-Place only approved public producer PDFs in `site/kataloger/`. Add a normal link where the missing-catalogue text is now:
+Place only approved public producer PDFs in `site/kataloger/`. Add a normal link at the end of each producer article, inside its `details` block after the presentation text:
 
 ```html
 <a href="/kataloger/approved-producer.pdf" type="application/pdf">
@@ -73,6 +73,10 @@ Place only approved public producer PDFs in `site/kataloger/`. Add a normal link
 ```
 
 Use the actual filename and producer name. Open in the same tab so ordinary Back navigation works. Verify it returns the correct PDF, including after replacing an old catalogue. These PDFs are separate from the private rare-wine list. The empty `kataloger/` directory can be created when the first PDF arrives if version control does not retain it.
+
+### Producer list notes
+
+Producers appear alphabetically. Andrea Moser is labelled «Italia (IT)» rather than a region — he is a consultant winemaker working with different producers across Italy; confirm this label with the owner. Producer logos are deliberately not displayed on the page: fewer than half of the producers had a logo at delivery (still missing for Camerano Vittorio, Brezza, Costaripa, Andrea Moser, Kurtatsch and Gottardi Mazzon), and the delivered files varied too much in size, weight and contrast to present consistently. Processed logo files from the Produsentbilder delivery (2026-09-16) remain in `site/assets/images/producers/` for future trade/catalogue use.
 
 ## Before launch
 
