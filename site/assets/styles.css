@@ -176,14 +176,29 @@ button.button { width: 100%; border: 0; cursor: pointer; font-family: var(--sans
 .email { overflow-wrap: anywhere; }
 .constrained { max-width: 620px; margin-top: 30px; }
 .producer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; margin-top: 60px; align-items: start; }
-main > .producer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 60px 60px; }
-main > .producer-list .producer { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 0; }
+main > .producer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 60px; }
+main > .producer-list .producer { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 0; border-top: 1px solid var(--line); padding-top: 28px; }
 main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
 .producer p:not(.eyebrow) { color: var(--muted); }
 .producer.text-only { display: block; max-width: 620px; }
-.producer-logo { display: block; height: auto; max-height: 68px; max-width: min(100%, 320px); width: auto; margin: 0 0 26px; }
+.producer summary {
+  display: inline-block;
+  padding: 2px 0;
+  font-size: .6875rem;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+}
+.producer summary::-webkit-details-marker { display: none; }
+.producer summary::after { content: "+"; margin-left: 10px; }
+.producer summary:hover, .producer details[open] summary { color: #fff; }
+.producer summary:focus-visible { outline: 2px solid var(--text); outline-offset: 5px; }
+.producer details[open] summary::after { content: "−"; }
+.producer details p { margin: 18px 0 0; }
 .media { margin: 50px 0 0; }
-.media img, .producer > img:not(.producer-logo) { width: 100%; }
+.media img, .producer > img { width: 100%; }
 .products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; margin-top: 55px; }
 .collection { margin-top: 65px; }
 .collection .products { margin-top: 35px; }
@@ -228,7 +243,7 @@ address { font-style: normal; }
   .request { padding: 27px 24px; }
   .request h2 { font-size: 2.0625rem; }
   .producer, .products { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 35px; }
-  main > .producer-list { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  main > .producer-list { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .product-image { height: 260px; }
   .country { margin-top: 5px; }
 }
