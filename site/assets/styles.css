@@ -182,6 +182,7 @@ main > .producer-list { display: grid; grid-template-columns: repeat(2, minmax(0
 main > .producer-list .producer { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 0; }
 main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
 .producer p:not(.eyebrow) { color: var(--muted); }
+.producer-logo { display: block; height: auto; max-height: 68px; max-width: min(100%, 320px); width: auto; margin: 0 0 26px; }
 .placeholder {
   display: grid;
   place-items: center;
@@ -195,7 +196,7 @@ main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
   letter-spacing: .035em;
 }
 .media { margin: 50px 0 0; }
-.media img, .producer > img { width: 100%; }
+.media img, .producer > img:not(.producer-logo) { width: 100%; }
 .team { min-height: 360px; }
 .products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; margin-top: 55px; }
 .collection { margin-top: 65px; }
