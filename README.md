@@ -32,7 +32,7 @@ Open [the local preview](http://127.0.0.1:4174/). Serve `site/` as the web root:
 
 ## Pending content
 
-Final logo, slogan, real email, approved copy and photos, producers and their PDFs, actual products/specifications/prices, team and company details, domain and hosting. Content edits are developer-managed for now; long-term ownership remains undecided.
+Final logo, slogan, real email, approved copy and photos, producers and their PDFs, actual products/specifications/prices, team story and photos, domain and hosting. Registered company details (Trecalici AS, org.nr 937 578 245) are already in place from Enhetsregisteret. Content edits are developer-managed for now; long-term ownership remains undecided.
 
 The three product pages post email-capture forms to [FormSubmit](https://formsubmit.co/) and om oss keeps a plain `mailto:` link. All four currently use the temporary testing address `squares-cabinet.1g@icloud.com`; the FormSubmit forms must be activated once (see the [maintenance guide](docs/maintenance.md)) and a confirmed final address must replace it before launch. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
 

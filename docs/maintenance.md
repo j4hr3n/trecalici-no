@@ -22,7 +22,7 @@ Keep ZIPs and original photos outside `site/`. Confirm rights, names, captions a
 | Produsentene våre | One article per confirmed producer: name, location, photo, description, wine information and catalogue PDF |
 | Vinglass | Sophienwald introduction; actual model names, photos, volume, height, pack quantity, price and price basis |
 | Kaviar | Giaveri introduction; actual names, photos, variants, sizes/net weights, prices and price basis |
-| Om oss | Team photo/names, story, vision, legal company name, organisation number and contact details |
+| Om oss | Team photo/names, story, vision and final email/contact details. Registered company details (Trecalici AS, org.nr 937 578 245) are already in place, sourced from Enhetsregisteret; the street address is deliberately not shown |
 
 The two product cards on each product page are layout examples, not an asserted product count. Duplicate or remove complete `<article>` blocks to match the supplied range. Missing PDF status is plain text, deliberately not a link.
 
