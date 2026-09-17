@@ -198,6 +198,9 @@ main > .producer-list .producer p:not(.eyebrow) { max-width: 60ch; }
 .media img, .producer > img { width: 100%; }
 .team { min-height: 360px; }
 .products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; margin-top: 55px; }
+.collection { margin-top: 65px; }
+.collection .products { margin-top: 35px; }
+.collection h2 { margin-bottom: 12px; }
 .products .placeholder, .product-image { height: 300px; margin-bottom: 25px; }
 .product-image { width: 100%; object-fit: contain; background: var(--panel); }
 .products h2 { font-size: 1.9375rem; margin-bottom: 16px; }
