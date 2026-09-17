@@ -50,11 +50,13 @@ The three product pages collect visitor emails with plain HTML forms posted to [
 
 Each submission emails the owner (table template, subject names the interest) and FormSubmit instantly auto-responds to the visitor with a Bokmål confirmation via the form's `_autoresponse` field. Om oss intentionally keeps its manual `mailto:` contact.
 
-Every form points its `action` at `https://formsubmit.co/katalog@example.invalid`, a deliberately non-deliverable placeholder. To activate:
+Every form points its `action` at `https://formsubmit.co/squares-cabinet.1g@icloud.com`, a temporary address set up for testing; om oss uses the same address in its `mailto:` link. To activate the forms:
 
-1. Replace `katalog@example.invalid` in the three `action` attributes with the confirmed receiving address.
-2. Deploy, submit one form on the live site, and click the confirmation link FormSubmit emails to that address. This is a one-time activation per receiving address.
-3. Keep the required consent checkbox and the hidden `_honey` honeypot in each form. Forms rely on FormSubmit's reCAPTCHA (default, enabled); note that `_autoresponse` stops working if reCAPTCHA is disabled or the form is submitted via AJAX.
+1. Deploy, submit one form on the live site, and click the confirmation link FormSubmit emails to that address. This is a one-time activation per receiving address.
+2. Submit again to confirm both the owner notification and the visitor auto-response arrive.
+3. Before launch, replace the temporary address with the confirmed receiving address in the three `action` attributes and the om-oss `mailto:` link, then repeat activation for the new address.
+
+Keep the required consent checkbox and the hidden `_honey` honeypot in each form. Forms rely on FormSubmit's reCAPTCHA (default, enabled); note that `_autoresponse` stops working if reCAPTCHA is disabled or the form is submitted via AJAX.
 
 After a successful submission FormSubmit redirects to `/takk/`. `assets/nav.js` injects that absolute redirect URL (`_next`) at runtime, derived from the script's own URL, so it resolves both at the site root and under the GitHub Pages base path. Without JavaScript, FormSubmit shows its own thank-you page instead. Keep the wine list outside the public site; the owner replies manually with the private attachment. A data-processing/privacy review for the collected emails is still pending before launch.
 

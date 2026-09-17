@@ -44,7 +44,7 @@ Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that co
 
 ## Email capture forms follow-up
 
-After this snapshot, the three product pages gained FormSubmit-backed email capture forms (owner notification + visitor auto-response) and a `/takk/` confirmation page; om oss keeps its `mailto:` contact. The "no forms" line above therefore no longer describes the current state. The forms still point at the non-deliverable placeholder address, so live submission and delivery remain unverified. Form rendering, consent checkbox, honeypot and the JavaScript-injected `/takk/` redirect need a fresh pass in Chromium and Safari at the usual widths before launch.
+After this snapshot, the three product pages gained FormSubmit-backed email capture forms (owner notification + visitor auto-response) and a `/takk/` confirmation page; om oss keeps its `mailto:` contact. The "no forms" line above therefore no longer describes the current state. All four now use the temporary testing address `squares-cabinet.1g@icloud.com`; live submission, FormSubmit activation and delivery remain unverified until the owner completes the activation step. Form rendering, consent checkbox, honeypot and the JavaScript-injected `/takk/` redirect need a fresh pass in Chromium and Safari at the usual widths before launch.
 
 ## GitHub Pages workflow follow-up
 
