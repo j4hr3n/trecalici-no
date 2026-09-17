@@ -4,6 +4,33 @@
   const SITE_KEY = '0x4AAAAAAE6oXP7SfndREesn';
   const states = new Map();
   let loading;
+  // Native validation otherwise uses the browser's language, not the page's.
+  document.addEventListener('invalid', event => {
+    const field = event.target;
+    if (!field.matches('form[data-contact] input, form[data-contact] textarea')) return;
+    field.setCustomValidity('');
+    if (field.validity.valueMissing) {
+      field.setCustomValidity(field.name === 'samtykke'
+        ? 'Du må samtykke før du kan sende forespørselen.'
+        : field.name === 'email' ? 'Skriv inn e-postadressen din.' : 'Skriv inn en melding.');
+    } else if (field.validity.typeMismatch && field.type === 'email') {
+      field.setCustomValidity('Skriv inn en gyldig e-postadresse.');
+    } else if (field.validity.tooLong) {
+      field.setCustomValidity(`Bruk maksimalt ${field.maxLength} tegn.`);
+    } else if (!field.validity.valid) {
+      field.setCustomValidity('Kontroller at feltet er fylt ut riktig.');
+    }
+  }, true);
+  for (const type of ['input', 'change']) {
+    document.addEventListener(type, event => {
+      const field = event.target;
+      if (field.matches('form[data-contact] input, form[data-contact] textarea')) field.setCustomValidity('');
+    });
+  }
+  document.addEventListener('reset', event => {
+    if (!event.target.matches('form[data-contact]')) return;
+    for (const field of event.target.querySelectorAll('input, textarea')) field.setCustomValidity('');
+  });
   function loadTurnstile() {
     if (window.turnstile) return Promise.resolve();
     if (loading) return loading;
