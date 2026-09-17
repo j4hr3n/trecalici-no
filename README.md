@@ -36,7 +36,7 @@ Final logo, slogan, real email, approved copy and photos, producers and their PD
 
 The three product pages post email-capture forms to [FormSubmit](https://formsubmit.co/) and om oss keeps a plain `mailto:` link. All four currently use the temporary testing address `squares-cabinet.1g@icloud.com`; the FormSubmit forms must be activated once (see the [maintenance guide](docs/maintenance.md)) and a confirmed final address must replace it before launch. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
 
-All pages retain `noindex,nofollow`, a visible preview footer and explicit missing-content labels. `robots.txt` disallows crawling. These are indexing hints, not access control; the preview contains only the intentionally public skeleton, not confidential material. Canonicals, sitemap and social image await the approved domain and branding. A provisional favicon generated from the public circular Trecalici mark is in place.
+Pages are indexable: `robots.txt` allows crawling and the `noindex` preview restriction has been removed. Placeholder boxes, preview notes and the preview footer are gone from the pages. Canonicals, sitemap and social image await the approved domain and branding. A provisional favicon generated from the public circular Trecalici mark is in place.
 
 The self-hosted heading font includes Norwegian characters and its [SIL Open Font License](site/assets/fonts/OFL.txt). Only `site/` is intended for eventual hosting; source ZIPs, draft files and review screenshots must stay outside it.
 
@@ -48,4 +48,4 @@ Preview URL: https://j4hr3n.github.io/trecalici-no/
 
 The owner approved making the repository public. GitHub Pages is enabled with **GitHub Actions** as its source and HTTPS enforced. Both the preview and committed source (including draft and documentation) are public.
 
-Preview annotations, `noindex` and the non-deliverable email remain in place. This preview is not the final company launch. Every push to `main` publishes the current skeleton; use a separate branch for edits that should not be published yet.
+The temporary testing email and the provisional logo remain in place; see the pending-content list above. Every push to `main` publishes the current site; use a separate branch for edits that should not be published yet.

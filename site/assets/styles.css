@@ -174,8 +174,6 @@ button.button { width: 100%; border: 0; cursor: pointer; font-family: var(--sans
 .contact .signup { max-width: 420px; }
 .request .small, .small { font-size: .8125rem; }
 .email { overflow-wrap: anywhere; }
-.review-note { font-size: .8125rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; margin-top: 30px; }
-.request .review-note { font-size: .8125rem; }
 .constrained { max-width: 620px; margin-top: 30px; }
 .producer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; margin-top: 60px; align-items: start; }
 main > .producer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 60px 60px; }
