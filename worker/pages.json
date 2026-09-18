@@ -1,0 +1,74 @@
+{
+  "/": {
+    "markdown": "/index.md",
+    "title": "Trecalici Norge – vin, Sophienwald vinglass og Giaveri kaviar"
+  },
+  "/sjelden-vin/": {
+    "markdown": "/sjelden-vin/index.md",
+    "title": "Sjelden vin – få vinlisten på e-post | Trecalici Norge"
+  },
+  "/produsenter/": {
+    "markdown": "/produsenter/index.md",
+    "title": "Italienske vinprodusenter | Trecalici Norge"
+  },
+  "/vinglass/": {
+    "markdown": "/vinglass/index.md",
+    "title": "Sophienwald vinglass – Phoenix og Grand Cru | Trecalici Norge"
+  },
+  "/kaviar/": {
+    "markdown": "/kaviar/index.md",
+    "title": "Giaveri kaviar fra Italia | Trecalici Norge"
+  },
+  "/om-oss/": {
+    "markdown": "/om-oss/index.md",
+    "title": "Om Trecalici Norge – selskapet og kontaktinformasjon"
+  },
+  "/vinglass/phoenix-champagne/": {
+    "markdown": "/vinglass/phoenix-champagne/index.md",
+    "title": "Sophienwald Phoenix Champagne – 420 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-blanc/": {
+    "markdown": "/vinglass/phoenix-blanc/index.md",
+    "title": "Sophienwald Phoenix Blanc – 420 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-bordeaux/": {
+    "markdown": "/vinglass/phoenix-bordeaux/index.md",
+    "title": "Sophienwald Phoenix Bordeaux – 570 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-bourgogne/": {
+    "markdown": "/vinglass/phoenix-bourgogne/index.md",
+    "title": "Sophienwald Phoenix Bourgogne – 710 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-midi/": {
+    "markdown": "/vinglass/phoenix-midi/index.md",
+    "title": "Sophienwald Phoenix Midi – 425 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-perlage/": {
+    "markdown": "/vinglass/phoenix-perlage/index.md",
+    "title": "Sophienwald Phoenix Perlage – 220 ml | Trecalici Norge"
+  },
+  "/vinglass/phoenix-twenty/": {
+    "markdown": "/vinglass/phoenix-twenty/index.md",
+    "title": "Sophienwald Phoenix Twenty – 225 ml | Trecalici Norge"
+  },
+  "/vinglass/grand-cru-champagne/": {
+    "markdown": "/vinglass/grand-cru-champagne/index.md",
+    "title": "Sophienwald Grand Cru Champagne – 570 ml | Trecalici Norge"
+  },
+  "/vinglass/grand-cru-bordeaux/": {
+    "markdown": "/vinglass/grand-cru-bordeaux/index.md",
+    "title": "Sophienwald Grand Cru Bordeaux – 720 ml | Trecalici Norge"
+  },
+  "/vinglass/grand-cru-bourgogne/": {
+    "markdown": "/vinglass/grand-cru-bourgogne/index.md",
+    "title": "Sophienwald Grand Cru Bourgogne – 950 ml | Trecalici Norge"
+  },
+  "/vinglass/dekanter/": {
+    "markdown": "/vinglass/dekanter/index.md",
+    "title": "Sophienwald Dekanter – 1570 ml | Trecalici Norge"
+  },
+  "/vinglass/deep-black/": {
+    "markdown": "/vinglass/deep-black/index.md",
+    "title": "Sophienwald Deep Black – 570 ml | Trecalici Norge"
+  }
+}

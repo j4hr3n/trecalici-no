@@ -1,5 +1,7 @@
 # Maintenance and content handover
 
+> Current SEO workflow (18 September 2026): production is `https://trecalici.no`; contact is `kontakt@trecalici.no`. Read [SEO deployment](seo-deployment.md) and [README](../README.md) before editing. Titles/business metadata live in `content/site.json`; glass data lives in `content/glasses.json`; run `npm run build` after edits. Generated model pages, head blocks, Markdown and discovery files must not be edited independently. The historical launch/hosting instructions below are superseded where they conflict with these documents.
+
 The site is a review skeleton. Edit the HTML in `site/` directly; no build or generator is involved. Shared styles live in `site/assets/styles.css`. Keep `draft/` as reference.
 
 ## Routine edits
