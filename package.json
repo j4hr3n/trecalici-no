@@ -1,0 +1,25 @@
+{
+  "name": "trecalici-no",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:images": "node scripts/prepare-images.mjs",
+    "build": "python3 scripts/build-seo.py",
+    "check": "python3 scripts/build-seo.py --check && python3 scripts/check-site.py",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "dev": "wrangler dev --port 4187",
+    "audit": "node scripts/lighthouse.mjs",
+    "verify:production": "node scripts/verify-production.mjs https://trecalici.no",
+    "deploy": "npm run build && npm run check && npm test && wrangler deploy"
+  },
+  "engines": {
+    "node": ">=22.19"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "lighthouse": "13.4.1",
+    "sharp": "0.35.4",
+    "wrangler": "4.134.0"
+  }
+}

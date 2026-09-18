@@ -1,0 +1,18 @@
+{
+  "origin": "https://trecalici.no",
+  "name": "Trecalici Norge",
+  "legalName": "Trecalici AS",
+  "organizationNumber": "937578245",
+  "email": "kontakt@trecalici.no",
+  "contentSignal": "search=yes, ai-input=yes, ai-train=no",
+  "pages": {
+    "/": {"title": "Trecalici Norge – vin, Sophienwald vinglass og Giaveri kaviar", "description": "Bli kjent med Trecalici Norge, våre italienske vinprodusenter, vinglass fra Sophienwald og kaviar fra Giaveri. Ta kontakt for mer informasjon.", "label": "Forside"},
+    "/sjelden-vin/": {"title": "Sjelden vin – få vinlisten på e-post | Trecalici Norge", "description": "Kontakt Trecalici Norge for den gjeldende vinlisten. Vi følger opp forespørsler fra privatkunder og bedriftskunder manuelt på e-post.", "label": "Sjelden vin"},
+    "/produsenter/": {"title": "Italienske vinprodusenter | Trecalici Norge", "description": "Bli kjent med de 19 italienske vinprodusentene Trecalici Norge samarbeider med, fra Piemonte til Sicilia. Les om regionene, historien og menneskene.", "label": "Produsentene våre", "type": "CollectionPage"},
+    "/vinglass/": {"title": "Sophienwald vinglass – Phoenix og Grand Cru | Trecalici Norge", "description": "Utforsk håndblåste Sophienwald-glass hos Trecalici Norge. Sammenlign modell, volum og høyde for Phoenix, Grand Cru, dekanter og Deep Black.", "label": "Vinglass", "type": "CollectionPage", "image": "/assets/images/sophienwald-vin-bord.webp"},
+    "/kaviar/": {"title": "Giaveri kaviar fra Italia | Trecalici Norge", "description": "Les om Caviar Giaveri og malossol-kaviar fra produsentens egne størfarmer i Nord-Italia. Kontakt Trecalici Norge for mer informasjon om kaviar.", "label": "Kaviar", "image": "/assets/images/giaveri-storfarm.jpg"},
+    "/om-oss/": {"title": "Om Trecalici Norge – selskapet og kontaktinformasjon", "description": "Bli kjent med Trecalici Norge og menneskene bak selskapet. Finn kontaktinformasjon for Trecalici AS, organisasjonsnummer 937 578 245.", "label": "Om oss", "type": "AboutPage"},
+    "/takk/": {"title": "Takk for henvendelsen | Trecalici Norge", "description": "Bekreftelse på henvendelsen til Trecalici Norge.", "label": "Takk", "index": false},
+    "/404.html": {"title": "Siden finnes ikke | Trecalici Norge", "description": "Finn tilbake til Trecalici Norges sider.", "label": "Siden finnes ikke", "index": false}
+  }
+}

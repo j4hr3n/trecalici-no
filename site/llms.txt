@@ -1,0 +1,35 @@
+# Trecalici Norge
+
+> Trecalici AS i Norge. Italienske vinprodusenter, Sophienwald vinglass og Giaveri kaviar.
+
+Offisiell nettside: https://trecalici.no/
+Språk: norsk bokmål. Kontakt: kontakt@trecalici.no. Org.nr 937 578 245.
+
+## Sider
+
+- [Trecalici Norge – vin, Sophienwald vinglass og Giaveri kaviar](https://trecalici.no/index.md)
+- [Sjelden vin – få vinlisten på e-post | Trecalici Norge](https://trecalici.no/sjelden-vin/index.md)
+- [Italienske vinprodusenter | Trecalici Norge](https://trecalici.no/produsenter/index.md)
+- [Sophienwald vinglass – Phoenix og Grand Cru | Trecalici Norge](https://trecalici.no/vinglass/index.md)
+- [Giaveri kaviar fra Italia | Trecalici Norge](https://trecalici.no/kaviar/index.md)
+- [Om Trecalici Norge – selskapet og kontaktinformasjon](https://trecalici.no/om-oss/index.md)
+- [Sophienwald Phoenix Champagne – 420 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-champagne/index.md)
+- [Sophienwald Phoenix Blanc – 420 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-blanc/index.md)
+- [Sophienwald Phoenix Bordeaux – 570 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-bordeaux/index.md)
+- [Sophienwald Phoenix Bourgogne – 710 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-bourgogne/index.md)
+- [Sophienwald Phoenix Midi – 425 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-midi/index.md)
+- [Sophienwald Phoenix Perlage – 220 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-perlage/index.md)
+- [Sophienwald Phoenix Twenty – 225 ml | Trecalici Norge](https://trecalici.no/vinglass/phoenix-twenty/index.md)
+- [Sophienwald Grand Cru Champagne – 570 ml | Trecalici Norge](https://trecalici.no/vinglass/grand-cru-champagne/index.md)
+- [Sophienwald Grand Cru Bordeaux – 720 ml | Trecalici Norge](https://trecalici.no/vinglass/grand-cru-bordeaux/index.md)
+- [Sophienwald Grand Cru Bourgogne – 950 ml | Trecalici Norge](https://trecalici.no/vinglass/grand-cru-bourgogne/index.md)
+- [Sophienwald Dekanter – 1570 ml | Trecalici Norge](https://trecalici.no/vinglass/dekanter/index.md)
+- [Sophienwald Deep Black – 570 ml | Trecalici Norge](https://trecalici.no/vinglass/deep-black/index.md)
+
+## Forespørsler
+
+Vinlisten sendes manuelt etter henvendelse og er ikke offentlig tilgjengelig her. Pris og tilgjengelighet må avklares med Trecalici. Nettsidene tilbyr kontaktskjema og e-post, ikke automatisk bestilling eller betaling.
+
+## Innholdsformater
+
+HTML og Markdown inneholder den samme offentlige informasjonen. Send `Accept: text/markdown` til sidens URL eller bruk Markdown-lenkene over.

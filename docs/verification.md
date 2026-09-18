@@ -1,3 +1,5 @@
+> Historical verification record. For current SEO implementation, benchmark results and deployment limitations, see [SEO verification](seo-verification.md). Earlier noindex, form-provider and hosting statements below describe previous versions.
+
 # Skeleton verification — 15 September 2026
 
 Scope: the six pages in `site/` and the custom 404 page. Owner confirmed that content is not available yet and requested the skeleton only. This is not launch approval.

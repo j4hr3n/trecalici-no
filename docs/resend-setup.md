@@ -1,3 +1,5 @@
+> Public contact updated to `kontakt@trecalici.no` for SEO implementation. This does not change the independently deployed Worker's MAIL_TO/MAIL_FROM settings or provision a mailbox. Confirm domain delivery and configured recipient before launch.
+
 # Resend deployment and handover
 
 Status: the owner deployed the Worker on 2026-09-17. Its version-1 health response and GitHub Pages CORS preflight were verified. Live Turnstile verification and inbox delivery still require the manual checks below. No live emails were sent during automated tests.

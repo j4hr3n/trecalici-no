@@ -1,51 +1,59 @@
 # Trecalici Norge
 
-Six-page static website skeleton, preserving the accepted design draft. Norwegian Bokmål, plain HTML, one shared CSS file, and one small progressive-enhancement navigation script (assets/nav.js). No packages or build step.
+Norwegian Bokmål website for **https://trecalici.no/**. Static HTML, shared CSS and progressively enhanced navigation/forms. A small Cloudflare Worker serves Markdown variants and discovery headers; the contact Worker is separate.
 
-**Status:** review skeleton. The owner confirmed no content pack is available yet and requested a GitHub Pages preview. Final content and production launch are still pending.
+## Develop and verify
 
-## Preview
-
-From this directory:
+Requires Python 3.10+ and Node 22.19+ (Node 24 recommended).
 
 ```sh
-python3 -m http.server 4174 --bind 127.0.0.1 --directory site
+npm ci
+npm run build
+npm run check
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run dev
 ```
 
-Open [the local preview](http://127.0.0.1:4174/). Serve `site/` as the web root: root-relative links and directory URLs require HTTP rather than opening the HTML file directly.
+The Worker preview runs at http://127.0.0.1:4187. For an HTML-only preview, `python3 -m http.server 4174 --bind 127.0.0.1 --directory site` also works, but does not test negotiation, redirects or headers.
 
-| Page | Source |
-| --- | --- |
-| Homepage | [site/index.html](site/index.html) |
-| Sjelden vin | [site/sjelden-vin/index.html](site/sjelden-vin/index.html) |
-| Produsentene våre | [site/produsenter/index.html](site/produsenter/index.html) |
-| Vinglass | [site/vinglass/index.html](site/vinglass/index.html) |
-| Kaviar | [site/kaviar/index.html](site/kaviar/index.html) |
-| Om oss | [site/om-oss/index.html](site/om-oss/index.html) |
-| Takk (form confirmation) | [site/takk/index.html](site/takk/index.html) |
+`npm run audit` measures all 18 indexable pages in mobile and desktop Lighthouse, three runs per page/device. It saves HTML/JSON reports and median scores under `artifacts/lighthouse/`, and fails below 100 SEO/accessibility/best practices or 95 performance. It starts its own Worker on port 4188. `AUDIT_PATHS=/,/vinglass/ AUDIT_RUNS=1 npm run audit` runs a focused diagnostic. These are local lab measurements; production networking and field Core Web Vitals require separate verification.
 
-- [Maintenance and content guide](docs/maintenance.md)
-- [Verification results](docs/verification.md)
-- [Current screenshots](docs/site-previews/)
-- [Original implementation plan](docs/implementation-plan.md)
-- [Original draft](draft/index.html) (preserved unchanged)
+## Content and generated files
 
-## Pending content
+- Edit the six primary pages under `site/` for public copy.
+- Edit `content/site.json` for titles, descriptions, canonical origin, business identity and crawler policy.
+- Edit `content/glasses.json` for the 12 models, dimensions and descriptions. It generates overview cards, comparison rows, detail pages and Product JSON-LD. Do not edit generated model pages directly.
+- Run `npm run build` after edits. It updates marked metadata/breadcrumb blocks, detail pages, Markdown, sitemap, robots.txt, llms.txt and Worker manifests. Commit the generated outputs with the source changes. `npm run check` detects drift and broken links.
+- `npm run prepare:images` regenerates responsive images and the typographic social card. Run `npm run build` afterward. Source images stay available; do not rename them without updating references.
 
-Final logo, slogan, real email, approved copy and photos, producers and their PDFs, actual products/specifications/prices, team story and photos, domain and hosting. Registered company details (Trecalici AS, org.nr 937 578 245) are already in place from Enhetsregisteret. Content edits are developer-managed for now; long-term ownership remains undecided.
+The HTML, schema and Markdown use the same public content. Prices, stock and reviews are not invented. `/takk/`, errors and alternate Markdown files are excluded from search indexing; Markdown remains accessible to agents. Search/AI-answer crawlers are allowed; model-training crawlers are declined per the owner's choice. Google-Extended is declined because it combines training with Gemini grounding; Google Search remains allowed.
 
-The three product forms and general contact form use a Resend-backed Cloudflare Worker with Turnstile and on-page confirmation. The Worker is deployed separately from the static site; deploy backend changes before publishing dependent site changes. Follow [Resend setup](docs/resend-setup.md). The temporary receiving mailbox is configured in Cloudflare and used in public fallback links. No credentials belong in this repository. No PDF links are active until actual catalogues arrive. The public Trecalici logo remains provisionally cropped with CSS; replace it with approved artwork.
+The owner provided `kontakt@trecalici.no` as the public contact. The Resend Worker recipient and sender settings are managed separately; see [contact setup](docs/resend-setup.md). No live email was sent during SEO verification.
 
-Pages are indexable: `robots.txt` allows crawling and the `noindex` preview restriction has been removed. Placeholder boxes, preview notes and the preview footer are gone from the pages. Canonicals, sitemap and social image await the approved domain and branding. A provisional favicon generated from the public circular Trecalici mark is in place.
+## Deployment and remaining external setup
 
-The self-hosted heading font includes Norwegian characters and its [SIL Open Font License](site/assets/fonts/OFL.txt). Only `site/` is intended for eventual hosting; source ZIPs, draft files and review screenshots must stay outside it.
+See [SEO deployment and operations](docs/seo-deployment.md) for the launch sequence and [implementation results](docs/seo-verification.md) for measured results and limitations.
 
-## GitHub Pages preview
+At the implementation audit, production redirected to Cloudflare Access login. The remote runtime's Wrangler authentication had expired. The old GitHub Pages workflow was manually disabled, and the repository had no deployment secrets. A successful `Workers Builds: trecalici-no` check confirms that an existing Cloudflare Workers Git integration deploys `main`. Releasing code through that integration does not remove Access protection or configure DNS/search accounts; generated files alone do not make the live site crawlable.
 
-[Deployment workflow](.github/workflows/pages.yml) runs on every push to `main`, or manually from Actions. It uploads only `site/`; draft files, docs and screenshots stay out of the deployed site. A small Python step prefixes root-relative HTML links with the Pages base path in a temporary upload copy, so `/trecalici-no/` works without changing local URLs. No site runtime or package dependencies are added.
+```sh
+# From an authenticated runtime, after reviewing the deployment target:
+npm run deploy
+npm run verify:production
+node scripts/scan-agent-readiness.mjs https://trecalici.no/
+```
 
-Preview URL: https://j4hr3n.github.io/trecalici-no/
+`npm run deploy` generates and checks the site and tests before invoking Wrangler. It does not change Cloudflare Access, DNS, mailboxes, Search Console or Bing settings. Keep the separately deployed contact Worker intact. Never deploy `worker/contact.mjs` using the site's Wrangler configuration.
 
-The owner approved making the repository public. GitHub Pages is enabled with **GitHub Actions** as its source and HTTPS enforced. Both the preview and committed source (including draft and documentation) are public.
+The disabled GitHub Pages workflow is retained for optional previews. Its staging script prefixes project paths and adds `noindex` while keeping production canonicals. It publishes only `site/`; draft files, docs and screenshots remain outside the hosted site. Source repository content is public.
 
-The temporary testing email and the provisional logo remain in place; see the pending-content list above. Every push to `main` publishes the current site; use a separate branch for edits that should not be published yet.
+## Content ownership
+
+Final logo, producer/image permissions, Norwegian product prices/pack sizes, public catalogues and editorial review remain business-owned. The current logo is provisional. Existing source copy is retained; new content is based on existing facts and enquiry behavior. Keep private wine lists and customer information out of `site/`, source control, Markdown and discovery files.
+
+- [Maintenance guide](docs/maintenance.md)
+- [SEO/AEO plan](docs/seo-aeo-plan.md)
+- [Earlier verification history](docs/verification.md)
+- [Original design draft](draft/index.html)
