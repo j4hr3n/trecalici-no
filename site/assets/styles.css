@@ -209,7 +209,7 @@ button.button { width: 100%; cursor: pointer; font-family: var(--sans); }
 .producer-intro { color: var(--muted); }
 .producer-toggle {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 10px;
   min-height: 44px;
