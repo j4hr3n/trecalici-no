@@ -63,6 +63,27 @@ test('producer content and product links work without JavaScript', async ({ brow
   await context.close();
 });
 
+test('producer bios toggle instantly under reduced motion and animate otherwise', async ({ page }) => {
+  await page.goto('/produsenter/');
+  const details = page.locator('details').first();
+  const bio = details.locator('.producer-bio');
+  await page.locator('summary').first().click();
+  await expect(details).toHaveAttribute('open', '');
+  expect(await bio.evaluate(el => el.style.cssText)).toBe('');
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.locator('summary').first().click();
+  expect(await bio.evaluate(el => el.style.transition)).toContain('height');
+  await expect.poll(() => bio.evaluate(el => el.style.cssText)).toBe('');
+  await expect(details).not.toHaveAttribute('open', '');
+  await page.locator('summary').first().click();
+  expect(await bio.evaluate(el => el.style.transition)).toContain('height');
+  await expect.poll(() => bio.evaluate(el => el.style.cssText)).toBe('');
+  await expect(details).toHaveAttribute('open', '');
+  await page.locator('summary').first().click();
+  await expect.poll(() => details.evaluate(el => el.hasAttribute('open'))).toBe(false);
+  expect(await bio.evaluate(el => el.style.cssText)).toBe('');
+});
+
 test('real Worker serves Markdown and real 404s', async ({ request }) => {
   for (const accept of ['text/html', 'text/markdown', 'text/html']) {
     const response = await request.get('/vinglass/', { headers: { Accept: accept } });
