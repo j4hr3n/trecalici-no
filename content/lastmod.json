@@ -1,0 +1,74 @@
+{
+  "/": {
+    "sha256": "feafa9931a62746c54800564a7e98d15780aeeb8df1b30bd899bbeb62b3b1ecd",
+    "date": "2026-09-23"
+  },
+  "/sjelden-vin/": {
+    "sha256": "a8fcf004f022c7b5f0fa857d25468325f2a734a25da1018087ea1209ec921a5c",
+    "date": "2026-09-23"
+  },
+  "/produsenter/": {
+    "sha256": "672019c2467cdb7b7b49bc33288a9ae235868ef42cebf8696904964b59592103",
+    "date": "2026-09-23"
+  },
+  "/vinglass/": {
+    "sha256": "440e2a04963f5aa103cf0ccaee0b1940fc4c6b26d58134106ca590eb7b99079b",
+    "date": "2026-09-23"
+  },
+  "/kaviar/": {
+    "sha256": "3b1c0559f8edc49d31a62b19280d76f6dc59d93a5712a8e33625bdbba97ba351",
+    "date": "2026-09-23"
+  },
+  "/om-oss/": {
+    "sha256": "97bd830ad3c37d2303d6b7460f59c00da1ad72e4a985ff96ab02cfd7dde3e209",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-champagne/": {
+    "sha256": "ff73a3400756a51c24a8679dd331564e39fe4467862be0caae948bfb615e421c",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-blanc/": {
+    "sha256": "3f67984304e6d8efd6604be5a798d4b899803de18ec7d31ae75a44fa3e1dfa8d",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-bordeaux/": {
+    "sha256": "53663a1271c0c6eae0d51db4cbd972fbc1a3022719705e6f40e136a485b27cfd",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-bourgogne/": {
+    "sha256": "3867e99d88b00dd55f50cf8531b31372129c9dc2ef098a8dd329ba6d1eeeb933",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-midi/": {
+    "sha256": "fb9ea922062b5440363359cf0ab17edfef54b00d7ec2764d0baa9c9398117aa0",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-perlage/": {
+    "sha256": "a93a3d1bab26a973826371ad22ca6409124fad3eece58f34d920f456e04593e4",
+    "date": "2026-09-23"
+  },
+  "/vinglass/phoenix-twenty/": {
+    "sha256": "d563422cb6eba23d6aec3e3288b76fa88177a14a4e6b43d2a13017a0ac2f8a98",
+    "date": "2026-09-23"
+  },
+  "/vinglass/grand-cru-champagne/": {
+    "sha256": "28d6ffb37ffc95e9e8beed51b375cb11c3dc67a4590cf0551eff899a4055b2d7",
+    "date": "2026-09-23"
+  },
+  "/vinglass/grand-cru-bordeaux/": {
+    "sha256": "291486406ca19cac1431a27dbd7173b81ea3f0186b91e0e89e691abb1c3561ab",
+    "date": "2026-09-23"
+  },
+  "/vinglass/grand-cru-bourgogne/": {
+    "sha256": "1b2b566924c65d339f5c4273ae8cf3579f50df24bd072fb4897dcd76dc97788a",
+    "date": "2026-09-23"
+  },
+  "/vinglass/dekanter/": {
+    "sha256": "631ebbedad1fb38b9386f2f09c16cd414f9c583d98b00ce849fe1eedb188f6e3",
+    "date": "2026-09-23"
+  },
+  "/vinglass/deep-black/": {
+    "sha256": "c97bd24f75c2ebfe1d64f87529f0a87330b2e18eaf5d115dd14e11c1a3bac09c",
+    "date": "2026-09-23"
+  }
+}

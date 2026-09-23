@@ -8,15 +8,37 @@ Sophienwald
 
 # Dekanter
 
-Håndblåst krystallkaraffel med stabil grunn. Lar vinnen puste og løfter fargen og duften.
+Håndblåst krystallkaraffel med stabil grunn. Lar vinen puste og løfter fargen og duften.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw1006
 
 Volum: 1570 ml
 
 Høyde: 180 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Lufting av vin
+
+- Servering av vin og brennevin
+
+## Om Dekanter
+
+- Formen gir vinen luft, slik at den kan åpne seg.
+
+- Stabil bunn som hindrer at karaffelen velter.
+
+- Blyfritt krystallglass med klar lysbrytning.
+
+## Stell og vask
+
+Dekanter tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Dekanter](https://www.sophienwald.com/en/collections/phoenix/sophienwald-decanter-timeless-elegance-in-hand-blown-crystal-glass) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

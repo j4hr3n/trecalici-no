@@ -1,0 +1,22 @@
+{
+  "_comment": "Official producer websites, keyed by the h2 id on /produsenter/. Verified 2026-09-23. Used only as the schema.org url of each producer Organization: visible links to wine producers' sites are avoided because of the alcohol advertising ban (alkoholloven § 9-2).",
+  "andrea-moser": "https://www.andreamoserwinemaker.com/",
+  "brezza-giacomo-e-figli": "https://www.brezza.it/",
+  "buccia-nera": "https://www.buccianera.it/",
+  "buvoli": "https://www.buvoli.it/",
+  "camerano-vittorio": "https://www.camerano1875.com/",
+  "costaripa-di-mattia-vezzola": "https://costaripa.it/",
+  "dolomis": "https://www.dolomis.it/",
+  "famiglia-statella": "https://www.famigliastatella.com/",
+  "fattoria-le-pupille": "https://www.fattorialepupille.it/",
+  "gottardi-mazzon": "https://www.gottardi-mazzon.com/",
+  "kurtatsch": "https://www.kellerei-kurtatsch.it/",
+  "maculan": "https://www.maculan.net/",
+  "madonna-nera": "https://madonnanera.it/",
+  "montevetrano": "https://www.montevetrano.it/",
+  "nadia-curto": "https://nadiacurto.it/",
+  "pojer-e-sandri": "https://www.pojeresandri.com/",
+  "primosic": "https://primosic.com/",
+  "vigne-di-malies": "https://www.vignedimalies.it/",
+  "zyme": "https://zyme.it/"
+}

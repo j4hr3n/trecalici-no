@@ -4,6 +4,9 @@
   "legalName": "Trecalici AS",
   "organizationNumber": "937578245",
   "email": "kontakt@trecalici.no",
+  "address": {"streetAddress": "Vibes gate 11B", "postalCode": "0356", "addressLocality": "Oslo", "addressCountry": "NO"},
+  "registryUrl": "https://virksomhet.brreg.no/nb/oppslag/enheter/937578245",
+  "parentOrganization": {"name": "Trecalici", "url": "https://www.trecalici.com/"},
   "contentSignal": "search=yes, ai-input=yes, ai-train=no",
   "pages": {
     "/": {"title": "Trecalici Norge – vin, Sophienwald vinglass og Giaveri kaviar", "description": "Bli kjent med Trecalici Norge, våre italienske vinprodusenter, vinglass fra Sophienwald og kaviar fra Giaveri. Ta kontakt for mer informasjon.", "label": "Forside"},

@@ -20,6 +20,8 @@ For å sikre et produkt av høy kvalitet, produserer og pakker Giaveri kaviaren 
 
 Kontrollen over produksjonskjeden er total. Syklusen begynner med et egg og ender med et egg, og hvert steg skjer innenfor selskapets egne vegger.
 
+Les mer om produsenten og størfarmene på [caviargiaveri.com](https://www.caviargiaveri.com/).
+
 ![Hånd i hanske holder det merkede lokket til en kaviarboks fra Caviar Giaveri, med en åpnet boks kaviar bak.](https://trecalici.no/assets/images/giaveri-kaviarboks.jpg)
 
 ## Storens velvære bestemmer kaviarens kvalitet.
