@@ -4,7 +4,7 @@ url: https://trecalici.no/
 language: nb
 ---
 
-Norge
+![Trecalici](https://trecalici.no/assets/images/trecalici-logo-provisional.png)  Norge
 
 # Trecalici Norge.
 Vin. Glass. Kaviar.
@@ -24,6 +24,8 @@ Sammenlign Phoenix, Grand Cru, dekanter og blindsmakingsglass. Se modellnumre, v
 ## [Giaveri kaviar](https://trecalici.no/kaviar/)
 
 Les om Caviar Giaveri og produsentens egne størfarmer i Nord-Italia.
+
+Trecalici AS er et norsk aksjeselskap i Oslo og den norske delen av Trecalici, et uavhengig selskap for fine wines og sjeldne flasker. Vi distribuerer et lite utvalg italienske produsenter gjennom Vinmonopolet og HORECA, og tilbyr vinglass fra Sophienwald og kaviar fra Giaveri. [Les mer om oss](https://trecalici.no/om-oss/).
 
 Har du spørsmål? [Kontakt Trecalici AS](https://trecalici.no/om-oss/#contact-title), eller [be om vinlisten på e-post](https://trecalici.no/sjelden-vin/).
 
