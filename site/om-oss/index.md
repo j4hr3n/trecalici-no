@@ -42,7 +42,9 @@ Vår overbevisning er at store viner fortjener et publikum. Vi jobber for å fre
 
 Trecalici AS
 
-Org.nr 937 578 245
+Vibes gate 11B
+0356 Oslo
+Org.nr 937 578 245 ([Brønnøysundregistrene](https://virksomhet.brreg.no/nb/oppslag/enheter/937578245))
 Aksjeselskap · Registrert i MVA-registeret
 
 [kontakt@trecalici.no](mailto:kontakt@trecalici.no?subject=Kontakt%20med%20Trecalici%20Norge&body=Hei%21%0D%0A%0D%0A)

@@ -12,6 +12,7 @@ SITE = ROOT / 'site'
 CONFIG = json.loads((ROOT / 'content/site.json').read_text())
 GLASSES = json.loads((ROOT / 'content/glasses.json').read_text())
 RESPONSIVE = json.loads((ROOT / 'content/responsive-images.json').read_text())
+PRODUCERS = {k: v for k, v in json.loads((ROOT / 'content/producers.json').read_text()).items() if not k.startswith('_')}
 ORIGIN = CONFIG['origin']
 PAGES = dict(CONFIG['pages'])
 CHECK = argparse.ArgumentParser()
@@ -115,7 +116,9 @@ card_iter = iter(cards)
 glass_source = re.sub(r'<article\b[^>]*>.*?</article>', lambda _: next(card_iter), glass_source, flags=re.S)
 
 org_id, website_id = ORIGIN + '/#organization', ORIGIN + '/#website'
-org = {'@type': 'Organization', '@id': org_id, 'name': CONFIG['name'], 'legalName': CONFIG['legalName'], 'url': ORIGIN + '/', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'NO organisasjonsnummer', 'value': CONFIG['organizationNumber']}, 'email': CONFIG['email'], 'logo': ORIGIN + '/assets/images/favicon-192.png', 'contactPoint': {'@type': 'ContactPoint', 'email': CONFIG['email'], 'contactType': 'customer service', 'availableLanguage': ['nb']}}
+org = {'@type': 'Organization', '@id': org_id, 'name': CONFIG['name'], 'legalName': CONFIG['legalName'], 'url': ORIGIN + '/', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'NO organisasjonsnummer', 'value': CONFIG['organizationNumber']}, 'email': CONFIG['email'], 'logo': ORIGIN + '/assets/images/favicon-192.png', 'address': {'@type': 'PostalAddress', **CONFIG['address']}, 'contactPoint': {'@type': 'ContactPoint', 'email': CONFIG['email'], 'contactType': 'customer service', 'availableLanguage': ['nb']}, 'sameAs': [CONFIG['registryUrl']]}
+# The parent house sells wine. It is identified in schema only, not linked visibly (alkoholloven § 9-2).
+org['parentOrganization'] = {'@type': 'Organization', 'name': CONFIG['parentOrganization']['name'], 'url': CONFIG['parentOrganization']['url']}
 website = {'@type': 'WebSite', '@id': website_id, 'name': CONFIG['name'], 'url': ORIGIN + '/', 'inLanguage': 'nb', 'publisher': {'@id': org_id}}
 manifest = {}
 for path, meta in PAGES.items():
@@ -144,7 +147,16 @@ for path, meta in PAGES.items():
         graph.append({'@type': 'Product', '@id': canonical + '#product', 'name': 'Sophienwald ' + p['name'], 'description': p['description'], 'url': canonical, 'image': ORIGIN + p['image'], 'brand': {'@type': 'Brand', 'name': 'Sophienwald'}, 'mpn': p['model'], 'additionalProperty': [{'@type': 'PropertyValue', 'name': 'Volum', 'value': p['volume']}, {'@type': 'PropertyValue', 'name': 'Høyde', 'value': p['heightSpec']}]})
     if path in {'/produsenter/', '/vinglass/'}:
         items = [(p['name'], f'/vinglass/{p["slug"]}/') for p in GLASSES] if path == '/vinglass/' else [(n.text(), '/produsenter/#' + n.attrs['id']) for n in Tree(source).root.find_all('h2') if n.attrs.get('id')]
-        page['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(items), 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': n, 'url': ORIGIN + u} for i, (n, u) in enumerate(items, 1)]}
+        elements = []
+        for i, (n, u) in enumerate(items, 1):
+            element = {'@type': 'ListItem', 'position': i, 'name': n, 'url': ORIGIN + u}
+            producer_id = u.partition('#')[2]
+            if producer_id:
+                if producer_id not in PRODUCERS:
+                    raise SystemExit(f'content/producers.json: missing website for {producer_id}')
+                element = {'@type': 'ListItem', 'position': i, 'item': {'@type': 'Organization', '@id': ORIGIN + u, 'name': n, 'url': PRODUCERS[producer_id]}}
+            elements.append(element)
+        page['mainEntity'] = {'@type': 'ItemList', 'numberOfItems': len(items), 'itemListElement': elements}
     graph.append(page)
     image = ORIGIN + '/assets/images/social-card.png'
     tags = [f'  <title>{esc(meta["title"])}</title>', f'  <meta name="description" content="{esc(meta["description"])}">', f'  <meta name="robots" content="{robots}">']
