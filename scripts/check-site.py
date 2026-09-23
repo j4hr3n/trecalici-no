@@ -90,6 +90,7 @@ for file in sorted(SITE.rglob('*.html')):
 sitemap = ElementTree.parse(SITE / 'sitemap.xml')
 urls = [n.text for n in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 check(set(urls) == {ORIGIN + p for p in PAGES} and len(urls) == len(PAGES), 'sitemap coverage')
+check(len(sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod')) == len(urls), 'sitemap lastmod')
 check(f'Sitemap: {ORIGIN}/sitemap.xml' in (SITE / 'robots.txt').read_text(), 'robots sitemap discovery')
 check((SITE / 'assets/images/social-card.png').is_file(), 'social card missing')
 if errors: raise SystemExit('\n'.join(errors))

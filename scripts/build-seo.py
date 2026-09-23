@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate SEO metadata, detail pages and discovery from public content only."""
 import argparse
+import datetime
+import hashlib
 import html
 import json
 import re
@@ -19,6 +21,10 @@ CHECK = argparse.ArgumentParser()
 CHECK.add_argument('--check', action='store_true')
 CHECK = CHECK.parse_args().check
 CHANGED = []
+# lastmod changes only when a page's generated HTML changes, so the sitemap stays truthful without relying on git history.
+LASTMOD_PATH = ROOT / 'content/lastmod.json'
+LASTMOD = json.loads(LASTMOD_PATH.read_text()) if LASTMOD_PATH.exists() else {}
+TODAY = datetime.date.today().isoformat()
 
 
 def emit(path, text):
@@ -206,10 +212,14 @@ for path, meta in PAGES.items():
         md = f'---\ntitle: {json.dumps(meta["title"], ensure_ascii=False)}\nurl: {canonical}\nlanguage: nb\n---\n\n{body}\n\n---\n\nTrecalici AS · Org.nr 937 578 245\n\nKontakt: [{CONFIG["email"]}](mailto:{CONFIG["email"]})\n'
         emit('site' + md_path, md)
         manifest[path] = {'markdown': md_path, 'title': meta['title']}
+        digest = hashlib.sha256(source.encode()).hexdigest()
+        previous = LASTMOD.get(path, {})
+        LASTMOD[path] = previous if previous.get('sha256') == digest else {'sha256': digest, 'date': TODAY}
 
 emit('worker/pages.json', json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 emit('worker/policy.json', json.dumps({'origin': ORIGIN, 'contentSignal': CONFIG['contentSignal']}, indent=2) + '\n')
-emit('site/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{ORIGIN}{p}</loc></url>\n' for p in manifest) + '</urlset>\n')
+emit('content/lastmod.json', json.dumps({p: LASTMOD[p] for p in manifest}, indent=2) + '\n')
+emit('site/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{ORIGIN}{p}</loc><lastmod>{LASTMOD[p]["date"]}</lastmod></url>\n' for p in manifest) + '</urlset>\n')
 training = 'yes' in CONFIG['contentSignal'].split('ai-train=')[1]
 robots = f'# Public content usage policy: https://contentsignals.org/\nUser-agent: *\nContent-Signal: {CONFIG["contentSignal"]}\nAllow: /\n\n'
 for bot in ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'ChatGPT-User', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User']:
