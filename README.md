@@ -24,8 +24,10 @@ The Worker preview runs at http://127.0.0.1:4187. For an HTML-only preview, `pyt
 
 - Edit the six primary pages under `site/` for public copy.
 - Edit `content/site.json` for titles, descriptions, canonical origin, business identity and crawler policy.
-- Edit `content/glasses.json` for the 12 models, dimensions and descriptions. It generates overview cards, comparison rows, detail pages and Product JSON-LD. Do not edit generated model pages directly.
+- Edit `content/glasses.json` for the 12 models, dimensions and descriptions. It generates overview cards, comparison rows, detail pages and Product JSON-LD. Do not edit generated model pages directly. Suitability, features and colour come from each model's `sourceUrl` on sophienwald.com; keep them sourced.
+- `content/site.json` also holds the registered address and Brreg URL (from Enhetsregisteret) and the parent house. `content/producers.json` maps each producer heading id on `/produsenter/` to its verified official website. Both parent house and producer sites appear only in JSON-LD, never as visible links, because Norwegian sites linking to alcohol advertising risk breaching alkoholloven § 9-2. Add a producer there when you add one to the page; the build fails otherwise.
 - Run `npm run build` after edits. It updates marked metadata/breadcrumb blocks, detail pages, Markdown, sitemap, robots.txt, llms.txt and Worker manifests. Commit the generated outputs with the source changes. `npm run check` detects drift and broken links.
+- Sitemap `lastmod` comes from `content/lastmod.json`, a generated hash manifest: a page's date moves to the build date only when its generated HTML changes. Commit it with the rest of the build output.
 - `npm run prepare:images` regenerates responsive images and the typographic social card. Run `npm run build` afterward. Source images stay available; do not rename them without updating references.
 
 The HTML, schema and Markdown use the same public content. Prices, stock and reviews are not invented. `/takk/`, errors and alternate Markdown files are excluded from search indexing; Markdown remains accessible to agents. Search/AI-answer crawlers are allowed; model-training crawlers are declined per the owner's choice. Google-Extended is declined because it combines training with Gemini grounding; Google Search remains allowed.
