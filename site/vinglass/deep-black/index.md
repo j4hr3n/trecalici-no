@@ -10,13 +10,37 @@ Sophienwald
 
 Ugjennomsiktig, svart blindsmakingsglass for nøytral smaking. Kun aroma og smak teller.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw2003
 
 Volum: 570 ml
 
 Høyde: 228 mm
+
+Farge: Dyp svart
+
+## Egnet for
+
+- Blindsmaking
+
+- Sommelieropplæring
+
+- Alle typer vin
+
+## Om Deep Black
+
+- Det svarte glasset absorberer lyset helt, slik at fargen ikke påvirker vurderingen.
+
+- Kupeform for god aromautvikling, med tynn og lett munnrand.
+
+- Blyfritt krystallglass.
+
+## Stell og vask
+
+Deep Black tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Deep Black](https://www.sophienwald.com/en/collections/phoenix/sophienwald-deep-black-blind-tasting-glass) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

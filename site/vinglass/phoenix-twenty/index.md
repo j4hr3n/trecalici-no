@@ -10,13 +10,39 @@ Sophienwald
 
 Champagneskål etter 1920-tallets form, med vid skål og myk skumkrone.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw10071
 
 Volum: 225 ml
 
 Høyde: 160 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Champagne til mottakelser
+
+- Cocktailer med musserende vin
+
+- Desserter
+
+- Festlige anledninger
+
+## Om Phoenix Twenty
+
+- Formet etter historiske forbilder fra 1920-tallet.
+
+- Vid skål og presist formet munnrand for en myk skumkrone.
+
+- Tynn nok til å være elegant, robust nok til festbruk.
+
+## Stell og vask
+
+Phoenix Twenty tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Phoenix Twenty](https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-twenty-champagne-bowl) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

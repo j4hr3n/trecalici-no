@@ -10,13 +10,39 @@ Sophienwald
 
 Høy, slank kupa som samler de delikate aromaene i riesling, sauvignon blanc og grüner veltliner.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw1001
 
 Volum: 420 ml
 
 Høyde: 225 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Riesling
+
+- Sauvignon blanc
+
+- Grüner veltliner
+
+- Unge og modne hvitviner
+
+## Om Phoenix Blanc
+
+- Den svakt buede åpningen samler aromaene i delikate hvitviner.
+
+- Den slanke formen holder vinen kjølig, mens den lett åpne kupa gir aromaene rom.
+
+- Finslipt, myk munnrand.
+
+## Stell og vask
+
+Phoenix Blanc tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Phoenix Blanc](https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-blanc-white-wine-glass) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

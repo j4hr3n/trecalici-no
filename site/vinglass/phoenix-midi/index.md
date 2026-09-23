@@ -8,15 +8,45 @@ Sophienwald
 
 # Phoenix Midi
 
-Formet for tekstured viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.
+Formet for teksturerte viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw1055
 
 Volum: 425 ml
 
 Høyde: 204 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Fatlagret chardonnay
+
+- Skallgjærede hvitviner
+
+- Rødviner gjæret med hele klaser
+
+- Viner med lang maserasjon
+
+- Komplekse musserende viner med lang gjærlagring
+
+- Oksidative spesialiteter
+
+## Om Phoenix Midi
+
+- Rommelig buk som gir tanninrike og teksturerte viner plass.
+
+- Stor åpning som samler komplekse aromaer, fra tørket frukt til nøtter.
+
+- Laget for daglig bruk, med en spesiell kjøleteknikk som gjør glasset slitesterkt.
+
+## Stell og vask
+
+Phoenix Midi tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Phoenix Midi](https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-midi-glass) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

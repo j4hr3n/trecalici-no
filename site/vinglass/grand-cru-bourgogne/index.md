@@ -10,13 +10,41 @@ Sophienwald
 
 Kupen for de store bourgognene: eldre grand cru-pinot noirs, barolo riserva og brunello di montalcino.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw1042
 
 Volum: 950 ml
 
 Høyde: 255 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Grand cru-pinot noir fra Bourgogne
+
+- Barolo og barbaresco riserva
+
+- Brunello di Montalcino
+
+- Pinot noir fra Napa Valley
+
+- Moden tysk spätburgunder
+
+## Om Grand Cru Bourgogne
+
+- Kupa samler aromaene ved glassets rand og egner seg for eldre, modne årganger.
+
+- Papirtynne vegger og håndslipt munnrand.
+
+- Blyfritt krystallglass, utviklet over tre år sammen med vingårder i Bourgogne.
+
+## Stell og vask
+
+Grand Cru Bourgogne tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Grand Cru Bourgogne](https://www.sophienwald.com/en/collections/grand-cru/sophienwald-grand-cru-burgundy-red-wine-glass) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

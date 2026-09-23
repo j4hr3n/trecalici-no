@@ -10,13 +10,37 @@ Sophienwald
 
 Slank tulipan som bevarer friskheten og fremhever perlen. For champagne, crémant og pét-nat.
 
-Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.
+Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.
 
 Modell: Sw1007
 
 Volum: 420 ml
 
 Høyde: 240 mm
+
+Farge: Klar
+
+## Egnet for
+
+- Champagne
+
+- Crémant
+
+- Pét-nat
+
+## Om Phoenix Champagne
+
+- Tynne vegger som fremhever perlen i musserende viner.
+
+- Kupa leder aromaene mot nesen og bevarer friskheten til siste slurk.
+
+- Finslipt, myk munnrand.
+
+## Stell og vask
+
+Phoenix Champagne tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.
+
+Kilde: [produsentens side om Phoenix Champagne](https://www.sophienwald.com/en/collections/phoenix/sophienwald-champagne-glass-phoenix) hos Sophienwald.
 
 ## Pris og tilgjengelighet
 

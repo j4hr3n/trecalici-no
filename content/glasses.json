@@ -9,7 +9,19 @@
     "height": 900,
     "model": "Sw1007",
     "volume": "420 ml",
-    "heightSpec": "240 mm"
+    "heightSpec": "240 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-champagne-glass-phoenix",
+    "color": "klar",
+    "suitedFor": [
+      "Champagne",
+      "Crémant",
+      "Pét-nat"
+    ],
+    "features": [
+      "Tynne vegger som fremhever perlen i musserende viner.",
+      "Kupa leder aromaene mot nesen og bevarer friskheten til siste slurk.",
+      "Finslipt, myk munnrand."
+    ]
   },
   {
     "slug": "phoenix-blanc",
@@ -21,7 +33,20 @@
     "height": 900,
     "model": "Sw1001",
     "volume": "420 ml",
-    "heightSpec": "225 mm"
+    "heightSpec": "225 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-blanc-white-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Riesling",
+      "Sauvignon blanc",
+      "Grüner veltliner",
+      "Unge og modne hvitviner"
+    ],
+    "features": [
+      "Den svakt buede åpningen samler aromaene i delikate hvitviner.",
+      "Den slanke formen holder vinen kjølig, mens den lett åpne kupa gir aromaene rom.",
+      "Finslipt, myk munnrand."
+    ]
   },
   {
     "slug": "phoenix-bordeaux",
@@ -33,7 +58,20 @@
     "height": 900,
     "model": "Sw1030",
     "volume": "570 ml",
-    "heightSpec": "228 mm"
+    "heightSpec": "228 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-bordeaux-red-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Kraftige bordeauxviner",
+      "Cabernet sauvignon",
+      "Merlot",
+      "Komplekse hvitviner"
+    ],
+    "features": [
+      "Den vide formen gir god lufttilgang, slik at tanninrike viner åpner seg.",
+      "Vinkelen på kupa samler aromaer av mørke bær, sedertre og tobakk.",
+      "Produsenten anbefaler glasset som et allsidig førstevalg. Formen var utgangspunktet for Sophienwalds UNOPLUS."
+    ]
   },
   {
     "slug": "phoenix-bourgogne",
@@ -45,19 +83,46 @@
     "height": 900,
     "model": "Sw1002",
     "volume": "710 ml",
-    "heightSpec": "225 mm"
+    "heightSpec": "225 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-bourgogne-red-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Pinot noir fra Bourgogne og den nye verden",
+      "Komplekse chardonnayer",
+      "Nebbiolo, sangiovese og andre delikate rødviner"
+    ],
+    "features": [
+      "Tulipanformet kupa med største diameter på 13 cm.",
+      "Vinkelen på kupa samler aromaer av røde bær, skogbunn og krydder.",
+      "Håndslipt munnrand."
+    ]
   },
   {
     "slug": "phoenix-midi",
     "name": "Phoenix Midi",
-    "description": "Formet for tekstured viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.",
+    "description": "Formet for teksturerte viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.",
     "image": "/assets/images/sophienwald-phoenix-midi.webp",
     "alt": "Sophienwald Phoenix Midi, håndblåst glass med rommelig kupa.",
     "width": 426,
     "height": 900,
     "model": "Sw1055",
     "volume": "425 ml",
-    "heightSpec": "204 mm"
+    "heightSpec": "204 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-midi-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Fatlagret chardonnay",
+      "Skallgjærede hvitviner",
+      "Rødviner gjæret med hele klaser",
+      "Viner med lang maserasjon",
+      "Komplekse musserende viner med lang gjærlagring",
+      "Oksidative spesialiteter"
+    ],
+    "features": [
+      "Rommelig buk som gir tanninrike og teksturerte viner plass.",
+      "Stor åpning som samler komplekse aromaer, fra tørket frukt til nøtter.",
+      "Laget for daglig bruk, med en spesiell kjøleteknikk som gjør glasset slitesterkt."
+    ]
   },
   {
     "slug": "phoenix-perlage",
@@ -69,7 +134,21 @@
     "height": 900,
     "model": "Sw1003",
     "volume": "220 ml",
-    "heightSpec": "230 mm"
+    "heightSpec": "230 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-perlage-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Fine champagnecuvéer",
+      "Crémant",
+      "Fruktige musserende viner",
+      "Musserende rosé",
+      "Aperitiff"
+    ],
+    "features": [
+      "Slank tulipanform som holder perlen levende lenge.",
+      "Papirtynne vegger med god stabilitet.",
+      "Håndslipt munnrand."
+    ]
   },
   {
     "slug": "phoenix-twenty",
@@ -81,7 +160,20 @@
     "height": 900,
     "model": "Sw10071",
     "volume": "225 ml",
-    "heightSpec": "160 mm"
+    "heightSpec": "160 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-phoenix-twenty-champagne-bowl",
+    "color": "klar",
+    "suitedFor": [
+      "Champagne til mottakelser",
+      "Cocktailer med musserende vin",
+      "Desserter",
+      "Festlige anledninger"
+    ],
+    "features": [
+      "Formet etter historiske forbilder fra 1920-tallet.",
+      "Vid skål og presist formet munnrand for en myk skumkrone.",
+      "Tynn nok til å være elegant, robust nok til festbruk."
+    ]
   },
   {
     "slug": "grand-cru-champagne",
@@ -93,7 +185,21 @@
     "height": 900,
     "model": "Sw1040",
     "volume": "570 ml",
-    "heightSpec": "265 mm"
+    "heightSpec": "265 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/grand-cru/sophienwald-grand-cru-champagnenbsp-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Årgangschampagne med ti år eller mer",
+      "Prestisjecuvéer",
+      "Blanc de blancs",
+      "Oksidative champagner",
+      "Musserende viner lagret i solera"
+    ],
+    "features": [
+      "Vertikal tulipanform som støtter tertiære aromaer som brioche, mandel og honning.",
+      "Forlenget perlebane som holder perlen ved like.",
+      "Utviklet over tre år sammen med ledende champagnehus."
+    ]
   },
   {
     "slug": "grand-cru-bordeaux",
@@ -105,7 +211,20 @@
     "height": 900,
     "model": "Sw1043",
     "volume": "720 ml",
-    "heightSpec": "265 mm"
+    "heightSpec": "265 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/grand-cru/sophienwald-grand-cru-bordeaux-red-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Store bordeauxviner fra Médoc og høyre bredd",
+      "Supertoscanere",
+      "Kraftige rødviner fra Napa Valley",
+      "Modne rieslinger fra toppvinmarker"
+    ],
+    "features": [
+      "Håndtrukket stett for god balanse.",
+      "Kupa samler aromaene ved glassets rand og egner seg for eldre årganger.",
+      "Blyfritt krystallglass, utviklet over tre år sammen med vinprodusenter."
+    ]
   },
   {
     "slug": "grand-cru-bourgogne",
@@ -117,19 +236,44 @@
     "height": 900,
     "model": "Sw1042",
     "volume": "950 ml",
-    "heightSpec": "255 mm"
+    "heightSpec": "255 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/grand-cru/sophienwald-grand-cru-burgundy-red-wine-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Grand cru-pinot noir fra Bourgogne",
+      "Barolo og barbaresco riserva",
+      "Brunello di Montalcino",
+      "Pinot noir fra Napa Valley",
+      "Moden tysk spätburgunder"
+    ],
+    "features": [
+      "Kupa samler aromaene ved glassets rand og egner seg for eldre, modne årganger.",
+      "Papirtynne vegger og håndslipt munnrand.",
+      "Blyfritt krystallglass, utviklet over tre år sammen med vingårder i Bourgogne."
+    ]
   },
   {
     "slug": "dekanter",
     "name": "Dekanter",
-    "description": "Håndblåst krystallkaraffel med stabil grunn. Lar vinnen puste og løfter fargen og duften.",
+    "description": "Håndblåst krystallkaraffel med stabil grunn. Lar vinen puste og løfter fargen og duften.",
     "image": "/assets/images/sophienwald-dekanter.webp",
     "alt": "Sophienwald dekanter i håndblåst krystallglass.",
     "width": 900,
     "height": 858,
     "model": "Sw1006",
     "volume": "1570 ml",
-    "heightSpec": "180 mm"
+    "heightSpec": "180 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-decanter-timeless-elegance-in-hand-blown-crystal-glass",
+    "color": "klar",
+    "suitedFor": [
+      "Lufting av vin",
+      "Servering av vin og brennevin"
+    ],
+    "features": [
+      "Formen gir vinen luft, slik at den kan åpne seg.",
+      "Stabil bunn som hindrer at karaffelen velter.",
+      "Blyfritt krystallglass med klar lysbrytning."
+    ]
   },
   {
     "slug": "deep-black",
@@ -141,6 +285,18 @@
     "height": 900,
     "model": "Sw2003",
     "volume": "570 ml",
-    "heightSpec": "228 mm"
+    "heightSpec": "228 mm",
+    "sourceUrl": "https://www.sophienwald.com/en/collections/phoenix/sophienwald-deep-black-blind-tasting-glass",
+    "color": "dyp svart",
+    "suitedFor": [
+      "Blindsmaking",
+      "Sommelieropplæring",
+      "Alle typer vin"
+    ],
+    "features": [
+      "Det svarte glasset absorberer lyset helt, slik at fargen ikke påvirker vurderingen.",
+      "Kupeform for god aromautvikling, med tynn og lett munnrand.",
+      "Blyfritt krystallglass."
+    ]
   }
 ]

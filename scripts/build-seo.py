@@ -69,12 +69,20 @@ for product in GLASSES:
     <div class="producer product-detail">
       <div>
         <p class="lead">{esc(product['description'])}</p>
-        <p>Håndblåst glass fra Sophienwald. Modellen presenteres med produsentens mål nedenfor.</p>
+        <p>Munnblåst krystallglass fra Sophienwald. Hvert eksemplar formes for hånd, så små variasjoner fra glass til glass er en del av håndverket.</p>
         <dl class="specs">
           <div><dt>Modell</dt><dd>{esc(product['model'])}</dd></div>
           <div><dt>Volum</dt><dd>{esc(product['volume'])}</dd></div>
           <div><dt>Høyde</dt><dd>{esc(product['heightSpec'])}</dd></div>
+          <div><dt>Farge</dt><dd>{esc(product['color'].capitalize())}</dd></div>
         </dl>
+        <h2>Egnet for</h2>
+        <ul>{''.join(f'<li>{esc(s)}</li>' for s in product['suitedFor'])}</ul>
+        <h2>Om {esc(name)}</h2>
+        <ul>{''.join(f'<li>{esc(s)}</li>' for s in product['features'])}</ul>
+        <h2>Stell og vask</h2>
+        <p>{esc(name)} tåler oppvaskmaskin. Sophienwald anbefaler skånsomt program på maks 50 grader, lite flytende oppvaskmiddel og at glasset står med åpningen ned, uten svært skitten oppvask i samme vask.</p>
+        <p class="small">Kilde: <a href="{esc(product['sourceUrl'])}">produsentens side om {esc(name)}</a> hos Sophienwald.</p>
         <h2>Pris og tilgjengelighet</h2>
         <p>Kontakt oss for informasjon om {esc(name)}, pris og tilgjengelighet. En henvendelse er ikke en bestilling.</p>
         <p><a class="button" href="/vinglass/#contact-title">Spør oss om {esc(name)}</a></p>
@@ -144,7 +152,7 @@ for path, meta in PAGES.items():
     if 'product' in meta:
         p = meta['product']
         page['mainEntity'] = {'@id': canonical + '#product'}
-        graph.append({'@type': 'Product', '@id': canonical + '#product', 'name': 'Sophienwald ' + p['name'], 'description': p['description'], 'url': canonical, 'image': ORIGIN + p['image'], 'brand': {'@type': 'Brand', 'name': 'Sophienwald'}, 'mpn': p['model'], 'additionalProperty': [{'@type': 'PropertyValue', 'name': 'Volum', 'value': p['volume']}, {'@type': 'PropertyValue', 'name': 'Høyde', 'value': p['heightSpec']}]})
+        graph.append({'@type': 'Product', '@id': canonical + '#product', 'name': 'Sophienwald ' + p['name'], 'description': p['description'], 'url': canonical, 'image': ORIGIN + p['image'], 'brand': {'@type': 'Brand', 'name': 'Sophienwald'}, 'mpn': p['model'], 'color': p['color'], 'material': 'Krystallglass', 'height': {'@type': 'QuantitativeValue', 'value': int(p['heightSpec'].split()[0]), 'unitCode': 'MMT'}, 'sameAs': p['sourceUrl'], 'additionalProperty': [{'@type': 'PropertyValue', 'name': 'Volum', 'value': p['volume']}, {'@type': 'PropertyValue', 'name': 'Egnet for', 'value': ', '.join(p['suitedFor'])}]})
     if path in {'/produsenter/', '/vinglass/'}:
         items = [(p['name'], f'/vinglass/{p["slug"]}/') for p in GLASSES] if path == '/vinglass/' else [(n.text(), '/produsenter/#' + n.attrs['id']) for n in Tree(source).root.find_all('h2') if n.attrs.get('id')]
         elements = []

@@ -8,13 +8,15 @@ Sophienwald
 
 # Vinglass fra Sophienwald.
 
-Håndblåste krystallglass fra glassverket i Alt-Nagelberg i Østerrike, munnsblåst i treformer etter gammel tradisjon. Ingen to glass er nøyaktig like.
+Håndblåste krystallglass fra glassverket i Alt-Nagelberg i Østerrike, munnblåst i treformer etter gammel tradisjon. Ingen to glass er nøyaktig like.
 
 ## Munnblåst i treformer.
 
-Sophienwald glassene blåses for hånd av erfarne glassblåsere, i treformer slik den gamle glassblåsertradisjonen krever. De små avvikene fra glass til glass er ikke feil, men bevis på at hvert glass er formet av en menneskehånd. Det er umulig å lage to identiske.
+Sophienwald-glassene blåses for hånd av erfarne glassblåsere, i treformer slik den gamle glassblåsertradisjonen krever. De små avvikene fra glass til glass er ikke feil, men bevis på at hvert glass er formet av en menneskehånd. Det er umulig å lage to identiske.
 
-Tulipanformen har kjennetegnet Sophienwald-glassene helt siden 1700-tallet. Veggene er papirtynde, men overraskende stabile, og det blyfrie krystallglasset gjengir vinen som den er, i både farge og duft.
+Tulipanformen har kjennetegnet Sophienwald-glassene helt siden 1700-tallet. Veggene er papirtynne, men overraskende stabile, og det blyfrie krystallglasset gjengir vinen som den er, i både farge og duft.
+
+Les mer om glassverket og hele kolleksjonen på [sophienwald.com](https://www.sophienwald.com/).
 
 ![Glassblåser former det glødende glasset til et Sophienwald-glass ved glassverkets ovner.](https://trecalici.no/assets/images/sophienwald-glassblaser.webp)
 
@@ -22,7 +24,7 @@ Tulipanformen har kjennetegnet Sophienwald-glassene helt siden 1700-tallet. Vegg
 
 Phoenix-kolleksjonen er elegant i formen og rommelig i størrelsen. Kupene leder aromaene mot nesen, mens de tynne veggene fremhever vinens nyanser. Grand Cru-kolleksjonen er Sophienwalds topplinje, utviklet sammen med vinprodusenter for de store, modne vinene.
 
-Alle glassene tåler oppvaskmaskin på skånsomt program, maks 50 grader, og leveres i gaveeske. Bestilles det seks glass, følger det med en mikrofibarklut fra Sophienwald.
+Alle glassene tåler oppvaskmaskin på skånsomt program, maks 50 grader, og leveres i gaveeske. Bestilles det seks glass, følger det med en mikrofiberklut fra Sophienwald.
 
 ![To Sophienwald-glass med hvitvin på et bord ved et opplyst vindu, med blomsterbukett ved siden av.](https://trecalici.no/assets/images/sophienwald-vin-bord.webp)
 
@@ -49,7 +51,7 @@ Volum og høyde for Sophienwald-modellene
 
 ## Phoenix-kolleksjonen.
 
-Sophienwalds moderne tolkning av tulipanen. Lett, tynnvegget og hverdagsåndig i bruk. Syv former, alle munnsblåste.
+Sophienwalds moderne tolkning av tulipanen. Lett, tynnvegget og hverdagsvennlig i bruk. Syv former, alle munnblåste.
 
 ![Sophienwald Phoenix Champagne, slankt håndblåst champagneglass i krystall.](https://trecalici.no/assets/images/sophienwald-phoenix-champagne.webp)
 
@@ -103,7 +105,7 @@ Høyde: 225 mm
 
 ### [Phoenix Midi](https://trecalici.no/vinglass/phoenix-midi/)
 
-Formet for tekstured viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.
+Formet for teksturerte viner: druemassefermenterte hvitviner, oransjeviner og oksidative spesialiteter.
 
 Modell: Sw1055
 
@@ -183,7 +185,7 @@ Til serveringen: en håndblåst karaffel for dekantering og et svart glass for b
 
 ### [Dekanter](https://trecalici.no/vinglass/dekanter/)
 
-Håndblåst krystallkaraffel med stabil grunn. Lar vinnen puste og løfter fargen og duften.
+Håndblåst krystallkaraffel med stabil grunn. Lar vinen puste og løfter fargen og duften.
 
 Modell: Sw1006
 
