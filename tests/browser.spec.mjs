@@ -19,6 +19,11 @@ for (const width of [390, 1440]) {
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://trecalici.no' + path);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
       expect(await page.locator('img').evaluateAll(images => images.every(img => img.loading === 'lazy' || (img.complete && img.naturalWidth > 0)))).toBe(true);
+      if (path.startsWith('/vinglass/')) {
+        await expect(page.getByRole('complementary', { name: 'Kontakt om vinglass' })).toHaveCount(1);
+        await expect(page.getByRole('region', { name: 'Bestilling av vinglass' })).toContainText('Minstebestilling er 6 glass.');
+        await expect(page.getByRole('link', { name: 'didrik.grovlen@trecalici.com', exact: true })).toHaveAttribute('href', 'mailto:didrik.grovlen@trecalici.com');
+      }
       if (['/', '/vinglass/', '/vinglass/phoenix-blanc/', '/kaviar/'].includes(path)) await page.screenshot({ path: `artifacts/screenshots/${path.replaceAll('/', '-') || 'home'}-${width}.png`, fullPage: true });
     }
     expect(errors).toEqual([]);
@@ -28,7 +33,7 @@ for (const width of [390, 1440]) {
 test('enhanced navigation updates all head metadata, layout classes, hash and history', async ({ page }) => {
   await page.goto('/');
   await page.evaluate(() => { window.navigationMarker = true; });
-  await page.locator('.home-nav a[href="/vinglass/"]').click();
+  await page.getByRole('navigation', { name: 'Hovedmeny' }).getByRole('link', { name: /Sophienwald vinglass/ }).click();
   await expect(page).toHaveURL(/\/vinglass\/$/);
   await expect(page.locator('body')).toHaveClass('inner');
   await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://trecalici.no/vinglass/');
@@ -44,10 +49,52 @@ test('enhanced navigation updates all head metadata, layout classes, hash and hi
   await page.locator('.brand').click();
   await expect(page.locator('body')).toHaveClass('home');
   await expect(page.locator('header.header')).toHaveCount(0);
+  await expect(page.locator('.glass-contact-bar')).toHaveCount(0);
   expect(await page.evaluate(() => window.navigationMarker)).toBe(true);
   await expect(page.locator('meta[name="description"]')).toHaveCount(1);
   await expect(page.locator('script[type="application/ld+json"]')).toHaveCount(1);
 });
+
+for (const width of [320, 1440]) {
+  test(`landing menu and persistent glass contact work at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('/');
+    const menu = page.getByRole('navigation', { name: 'Hovedmeny' });
+    await expect(menu.getByRole('link')).toHaveCount(4);
+    const tiles = await menu.getByRole('link').evaluateAll(links => links.map(link => {
+      const { x, y } = link.getBoundingClientRect();
+      return { x, y };
+    }));
+    if (width === 1440) {
+      expect(tiles[0].y).toBe(tiles[1].y);
+      expect(tiles[2].y).toBe(tiles[3].y);
+      expect(tiles[0].x).toBe(tiles[2].x);
+      expect(tiles[2].y).toBeGreaterThan(tiles[0].y);
+    }
+    await menu.getByRole('link', { name: /Sophienwald vinglass/ }).click();
+    for (const path of ['/vinglass/', '/vinglass/phoenix-blanc/']) {
+      if (path !== '/vinglass/') await page.locator('table a[href="/vinglass/phoenix-blanc/"]').click();
+      await expect(page).toHaveURL(new RegExp(path + '$'));
+      const bar = page.getByRole('complementary', { name: 'Kontakt om vinglass' });
+      await expect(bar).toContainText('Minstebestilling: 6 glass');
+      await expect(page.getByRole('link', { name: 'didrik.grovlen@trecalici.com', exact: true })).toHaveAttribute('href', 'mailto:didrik.grovlen@trecalici.com');
+      await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight / 2));
+      const bounds = await bar.boundingBox();
+      expect(bounds.y).toBe(0);
+      expect(bounds.height).toBeLessThan(100);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      await bar.getByRole('link', { name: 'Kontakt oss', exact: true }).click();
+      await expect(page).toHaveURL(/\/vinglass\/#contact-title$/);
+      await expect(page.locator('#contact-title')).toBeInViewport();
+      await expect(page.locator('#contact-title')).toBeFocused();
+      const contact = await page.locator('#contact-title').boundingBox();
+      expect(contact.y).toBeGreaterThanOrEqual(bounds.height);
+      expect(contact.y).toBeLessThan(800);
+    }
+    await page.getByRole('link', { name: 'Kaviar', exact: true }).click();
+    await expect(page.locator('.glass-contact-bar')).toHaveCount(0);
+  });
+}
 
 test('producer content and product links work without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 320, height: 800 } });
@@ -60,6 +107,9 @@ test('producer content and product links work without JavaScript', async ({ brow
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.locator('table a').first().click();
   await expect(page.locator('h1')).toHaveText('Phoenix Champagne');
+  await page.getByRole('complementary', { name: 'Kontakt om vinglass' }).getByRole('link', { name: 'Kontakt oss' }).click();
+  await expect(page).toHaveURL(/\/vinglass\/#contact-title$/);
+  await expect(page.locator('#epost')).toBeInViewport();
   await context.close();
 });
 

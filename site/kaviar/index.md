@@ -10,7 +10,13 @@ Giaveri
 
 Italiensk kaviar av egen produksjon, oppdrettet og pakket på produsentens egne størfarmer i Nord-Italia.
 
-![Luftfoto av størfarmen til Caviar Giaveri, med åpne bassenger midt i det norditalienske landskapet.](https://trecalici.no/assets/images/giaveri-storfarm.jpg)
+![Beluga Siberian fra Caviar Giaveri, rund gullfarget kaviarboks med hvitt lokk.](https://trecalici.no/assets/images/giaveri-beluga-siberian-cutout.webp)
+
+![Siberian Classic fra Caviar Giaveri, rund gullfarget kaviarboks med svart lokk.](https://trecalici.no/assets/images/giaveri-siberian-classic-cutout.webp)
+
+![Osietra Classic fra Caviar Giaveri, rund gullfarget kaviarboks med gyllent lokk.](https://trecalici.no/assets/images/giaveri-oscietra-classic-cutout.webp)
+
+![Sevruga Imperial fra Caviar Giaveri, rund gullfarget kaviarboks med rødt lokk.](https://trecalici.no/assets/images/giaveri-sevruga-imperial-cutout.webp)
 
 ## Førti år med kaviarproduksjon.
 

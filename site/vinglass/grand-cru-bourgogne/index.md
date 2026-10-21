@@ -58,6 +58,14 @@ Du kan også sende en e-post til [kontakt@trecalici.no](mailto:kontakt@trecalici
 
 ![Sophienwald Grand Cru Bourgogne, vidt håndblåst rødvinsglass i krystall.](https://trecalici.no/assets/images/sophienwald-grand-cru-bourgogne.webp)
 
+## Bestilling av vinglass
+
+Minstebestilling er 6 glass.
+
+### For HORECA
+
+For bestilling til hotell, restaurant og catering, kontakt [didrik.grovlen@trecalici.com](mailto:didrik.grovlen@trecalici.com) for priser og betingelser.
+
 ---
 
 Trecalici AS · Org.nr 937 578 245

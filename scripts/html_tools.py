@@ -63,7 +63,15 @@ def markdown(node, base):
         alt = attrs.get('alt', '')
         return f"![{alt}]({urljoin(base, attrs['src'])})\n\n" if alt else ''
     if tag == 'a':
-        return f"[{inner}]({urljoin(base, attrs.get('href', ''))})" if inner else ''
+        href = urljoin(base, attrs.get('href', ''))
+        headings = {'h1', 'h2', 'h3', 'h4'}
+        if any(isinstance(child, Node) and child.tag in headings for child in node.children):
+            # Markdown links cannot contain whole headings and paragraphs.
+            # Keep a linked heading followed by the card's descriptive content.
+            return ''.join('\n\n' + '#' * int(child.tag[1]) + f' [{child.text()}]({href})\n\n'
+                           if isinstance(child, Node) and child.tag in headings else markdown(child, base)
+                           for child in node.children)
+        return f"[{inner}]({href})" if inner else ''
     if tag in {'strong', 'b'}:
         return f' **{inner}** '
     if tag in {'em', 'i'}:
@@ -88,6 +96,6 @@ def markdown(node, base):
         return inner + '\n'
     if tag == 'li':
         return '\n- ' + inner + '\n'
-    if tag in {'p', 'section', 'article', 'div', 'nav', 'address', 'dl', 'details', 'summary', 'form', 'header'}:
+    if tag in {'p', 'section', 'article', 'div', 'nav', 'address', 'dl', 'details', 'summary', 'form', 'header', 'figure', 'figcaption'}:
         return '\n\n' + inner + '\n\n' if inner else ''
     return inner + (' ' if tag == 'span' else '')

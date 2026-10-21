@@ -10,6 +10,14 @@ Sophienwald
 
 Håndblåste krystallglass fra glassverket i Alt-Nagelberg i Østerrike, munnblåst i treformer etter gammel tradisjon. Ingen to glass er nøyaktig like.
 
+## Bestilling av vinglass
+
+Minstebestilling er 6 glass.
+
+### For HORECA
+
+For bestilling til hotell, restaurant og catering, kontakt [didrik.grovlen@trecalici.com](mailto:didrik.grovlen@trecalici.com) for priser og betingelser.
+
 ## Munnblåst i treformer.
 
 Sophienwald-glassene blåses for hånd av erfarne glassblåsere, i treformer slik den gamle glassblåsertradisjonen krever. De små avvikene fra glass til glass er ikke feil, men bevis på at hvert glass er formet av en menneskehånd. Det er umulig å lage to identiske.
@@ -24,7 +32,7 @@ Les mer om glassverket og hele kolleksjonen på [sophienwald.com](https://www.so
 
 Phoenix-kolleksjonen er elegant i formen og rommelig i størrelsen. Kupene leder aromaene mot nesen, mens de tynne veggene fremhever vinens nyanser. Grand Cru-kolleksjonen er Sophienwalds topplinje, utviklet sammen med vinprodusenter for de store, modne vinene.
 
-Alle glassene tåler oppvaskmaskin på skånsomt program, maks 50 grader, og leveres i gaveeske. Bestilles det seks glass, følger det med en mikrofiberklut fra Sophienwald.
+Alle glassene tåler oppvaskmaskin på skånsomt program, maks 50 grader, og leveres i gaveeske. Ved bestilling av seks glass følger det med en mikrofiberklut fra Sophienwald.
 
 ![To Sophienwald-glass med hvitvin på et bord ved et opplyst vindu, med blomsterbukett ved siden av.](https://trecalici.no/assets/images/sophienwald-vin-bord.webp)
 

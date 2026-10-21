@@ -1,14 +1,14 @@
 ---
-title: "Sjelden vin – få vinlisten på e-post | Trecalici Norge"
+title: "Kjelleren – få vinlisten på e-post | Trecalici Norge"
 url: https://trecalici.no/sjelden-vin/
 language: nb
 ---
 
 Vinlisten
 
-# Sjelden vin.
+# Kjelleren.
 
-Den oppdaterte listen,
+Den oppdaterte kjellerlisten,
 rett fra oss til deg.
 
 Ta kontakt for informasjon om utvalget vårt. Vi sender deg den gjeldende vinlisten på e-post.

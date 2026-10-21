@@ -4,14 +4,9 @@ url: https://trecalici.no/
 language: nb
 ---
 
+# Trecalici Norge
+
 ![Trecalici](https://trecalici.no/assets/images/trecalici-logo-provisional.png)  Norge
-
-# Trecalici Norge.
-Vin. Glass. Kaviar.
-
-Bli kjent med våre italienske vinprodusenter, håndblåste vinglass fra Sophienwald og kaviar fra Giaveri.
-
-[Sjelden vin](https://trecalici.no/sjelden-vin/) [Produsentene våre](https://trecalici.no/produsenter/) [Vinglass](https://trecalici.no/vinglass/) [Kaviar](https://trecalici.no/kaviar/) [Om oss](https://trecalici.no/om-oss/)
 
 ## [Italienske produsenter](https://trecalici.no/produsenter/)
 
@@ -25,9 +20,11 @@ Sammenlign Phoenix, Grand Cru, dekanter og blindsmakingsglass. Se modellnumre, v
 
 Les om Caviar Giaveri og produsentens egne størfarmer i Nord-Italia.
 
-Trecalici AS er et norsk aksjeselskap i Oslo og den norske delen av Trecalici, et uavhengig selskap for fine wines og sjeldne flasker. Vi distribuerer et lite utvalg italienske produsenter gjennom Vinmonopolet og HORECA, og tilbyr vinglass fra Sophienwald og kaviar fra Giaveri. [Les mer om oss](https://trecalici.no/om-oss/).
+## [Kjelleren](https://trecalici.no/sjelden-vin/)
 
-Har du spørsmål? [Kontakt Trecalici AS](https://trecalici.no/om-oss/#contact-title), eller [be om vinlisten på e-post](https://trecalici.no/sjelden-vin/).
+Ta kontakt for den gjeldende vinlisten. Vi følger opp forespørselen din på e-post.
+
+[Om oss](https://trecalici.no/om-oss/) · [Kontakt oss](https://trecalici.no/om-oss/#contact-title)
 
 ---
 

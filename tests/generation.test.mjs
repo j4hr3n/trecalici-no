@@ -26,6 +26,8 @@ test('a single rebuild propagates edited business and product facts through HTML
       assert.ok(body.includes('Updated product information for verification.'), path);
       assert.ok(body.includes('updated@example.org'), path);
       assert.ok(!body.includes('kontakt@trecalici.no'), path);
+      assert.ok(body.includes('didrik.grovlen@trecalici.com'), path);
+      assert.ok(body.includes('Minstebestilling er 6 glass.'), path);
     }
     assert.ok((await readFile(join(temp, 'site/index.html'), 'utf8')).includes(config.pages['/'].title));
   } finally {

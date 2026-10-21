@@ -6,6 +6,15 @@
   let latest = 0;
   const pageHead = 'title, meta[name="description"], meta[name="robots"], meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"], link[rel="alternate"], link[rel="sitemap"], script[type="application/ld+json"]';
 
+  const scrollToHash = hash => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(hash.slice(1))); } catch { /* malformed fragment */ }
+    if (target) {
+      target.focus({ preventScroll: true });
+      target.scrollIntoView();
+    } else window.scrollTo(0, 0);
+  };
+
   const navigate = async (url, pop) => {
     const token = ++latest;
     try {
@@ -21,11 +30,13 @@
       const run = () => {
         if (token !== latest) return;
         if (!pop) history.pushState({ scroll: 0 }, '', destination.href);
-        const newHeader = doc.querySelector('header.header');
-        const curHeader = document.querySelector('header.header');
-        if (newHeader && curHeader) curHeader.replaceWith(newHeader);
-        else if (newHeader) curMain.parentNode.insertBefore(newHeader, curMain);
-        else if (curHeader) curHeader.remove();
+        for (const selector of ['header.header', '.glass-contact-bar']) {
+          const next = doc.querySelector(selector);
+          const current = document.querySelector(selector);
+          if (next && current) current.replaceWith(next);
+          else if (next) curMain.parentNode.insertBefore(next, curMain);
+          else if (current) current.remove();
+        }
         curMain.replaceWith(newMain);
         document.body.className = doc.body.className;
         document.documentElement.lang = doc.documentElement.lang;
@@ -34,12 +45,7 @@
         document.dispatchEvent(new Event('trecalici:navigated'));
         if (!pop) newMain.focus({ preventScroll: true });
         if (pop) window.scrollTo(0, history.state?.scroll || 0);
-        else {
-          let target;
-          try { target = document.getElementById(decodeURIComponent(destination.hash.slice(1))); } catch { /* malformed fragment */ }
-          if (target) target.scrollIntoView();
-          else window.scrollTo(0, 0);
-        }
+        else scrollToHash(destination.hash);
       };
       if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         await document.startViewTransition(run).updateCallbackDone;
@@ -55,9 +61,16 @@
     if (!link || (link.target && link.target !== '_self') || link.hasAttribute('download')) return;
     const url = new URL(link.href, location.href);
     if (url.origin !== location.origin || !url.pathname.endsWith('/')) return;
-    if (url.pathname === location.pathname && url.search === location.search) return;
     event.preventDefault();
     history.replaceState({ ...history.state, scroll: window.scrollY }, '');
+    if (url.pathname === location.pathname && url.search === location.search) {
+      // Native hash navigation fires popstate, which would rebuild the page and
+      // restore the previous scroll position instead of revealing the target.
+      if (url.href !== location.href) history.pushState({ scroll: 0 }, '', url.href);
+      scrollToHash(url.hash);
+      history.replaceState({ ...history.state, scroll: window.scrollY }, '');
+      return;
+    }
     navigate(url.href, false);
   });
   window.addEventListener('popstate', () => navigate(location.href, true));

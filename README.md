@@ -18,12 +18,15 @@ npm run dev
 
 The Worker preview runs at http://127.0.0.1:4187. For an HTML-only preview, `python3 -m http.server 4174 --bind 127.0.0.1 --directory site` also works, but does not test negotiation, redirects or headers.
 
+The site uses self-hosted Raleway variable fonts from Google Fonts (Latin, normal and italic). The font license is included at `site/assets/fonts/raleway-OFL.txt`.
+
 `npm run audit` measures all 18 indexable pages in mobile and desktop Lighthouse, three runs per page/device. It saves HTML/JSON reports and median scores under `artifacts/lighthouse/`, and fails below 100 SEO/accessibility/best practices or 95 performance. It starts its own Worker on port 4188. `AUDIT_PATHS=/,/vinglass/ AUDIT_RUNS=1 npm run audit` runs a focused diagnostic. These are local lab measurements; production networking and field Core Web Vitals require separate verification.
 
 ## Content and generated files
 
 - Edit the six primary pages under `site/` for public copy.
 - Edit `content/site.json` for titles, descriptions, canonical origin, business identity and crawler policy.
+- `content/site.json` also holds `glassOrders`: the six-glass minimum and the separate HORECA contact. The build shares this ordering information and the sticky contact bar across all wine glass pages.
 - Edit `content/glasses.json` for the 12 models, dimensions and descriptions. It generates overview cards, comparison rows, detail pages and Product JSON-LD. Do not edit generated model pages directly. Suitability, features and colour come from each model's `sourceUrl` on sophienwald.com; keep them sourced.
 - `content/site.json` also holds the registered address and Brreg URL (from Enhetsregisteret) and the parent house. `content/producers.json` maps each producer heading id on `/produsenter/` to its verified official website. Both parent house and producer sites appear only in JSON-LD, never as visible links, because Norwegian sites linking to alcohol advertising risk breaching alkoholloven § 9-2. Add a producer there when you add one to the page; the build fails otherwise.
 - Run `npm run build` after edits. It updates marked metadata/breadcrumb blocks, detail pages, Markdown, sitemap, robots.txt, llms.txt and Worker manifests. Commit the generated outputs with the source changes. `npm run check` detects drift and broken links.

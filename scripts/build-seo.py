@@ -17,6 +17,8 @@ RESPONSIVE = json.loads((ROOT / 'content/responsive-images.json').read_text())
 PRODUCERS = {k: v for k, v in json.loads((ROOT / 'content/producers.json').read_text()).items() if not k.startswith('_')}
 ORIGIN = CONFIG['origin']
 PAGES = dict(CONFIG['pages'])
+STYLESHEET_VERSION = hashlib.sha256((SITE / 'assets/styles.css').read_bytes()).hexdigest()[:12]
+NAVIGATION_VERSION = hashlib.sha256((SITE / 'assets/nav.js').read_bytes()).hexdigest()[:12]
 CHECK = argparse.ArgumentParser()
 CHECK.add_argument('--check', action='store_true')
 CHECK = CHECK.parse_args().check
@@ -63,6 +65,21 @@ def crumbs(path, label):
 
 # Glass facts are maintained once and drive cards, comparison and detail pages.
 glass_source = (SITE / 'vinglass/index.html').read_text()
+glass_orders = CONFIG['glassOrders']
+glass_contact_bar = f'''  <aside class="glass-contact-bar" aria-label="Kontakt om vinglass">
+    <div class="glass-contact-inner">
+      <p>Minstebestilling: {glass_orders['minimumQuantity']} glass</p>
+      <a class="button" href="/vinglass/#contact-title">Kontakt oss</a>
+    </div>
+  </aside>'''
+glass_ordering = f'''    <section class="glass-ordering" aria-labelledby="glass-order-title">
+      <h2 id="glass-order-title">Bestilling av vinglass</h2>
+      <p>Minstebestilling er {glass_orders['minimumQuantity']} glass.</p>
+      <h3>For HORECA</h3>
+      <p>For bestilling til hotell, restaurant og catering, kontakt <a class="email" href="mailto:{esc(glass_orders['horecaEmail'])}">{esc(glass_orders['horecaEmail'])}</a> for priser og betingelser.</p>
+    </section>'''
+glass_source = marked(glass_source, 'GLASS CONTACT', glass_contact_bar, '  <main')
+glass_source = marked(glass_source, 'GLASS ORDERING', glass_ordering, '    <section class="producer">')
 for product in GLASSES:
     slug, name = product['slug'], product['name']
     path = f'/vinglass/{slug}/'
@@ -97,6 +114,7 @@ for product in GLASSES:
       </div>
       <img class="detail-image" src="{product['image']}" alt="{esc(product['alt'])}" width="{product['width']}" height="{product['height']}" fetchpriority="high" decoding="async">
     </div>
+{glass_ordering}
   </main>'''
     detail = re.sub(r'  <main\b.*?</main>', lambda _: main, detail, flags=re.S)
     product['html'] = detail
@@ -138,8 +156,13 @@ manifest = {}
 for path, meta in PAGES.items():
     relative = 'site/' + (path.strip('/') + '/index.html' if path.endswith('/') and path != '/' else 'index.html' if path == '/' else path.lstrip('/'))
     source = meta['product']['html'] if 'product' in meta else glass_source if path == '/vinglass/' else (ROOT / relative).read_text()
+    # A changed stylesheet must reach visitors who cached the previous design.
+    source = re.sub(r'href="/assets/styles\.css(?:\?[^"\s]*)?"', f'href="/assets/styles.css?v={STYLESHEET_VERSION}"', source)
+    source = re.sub(r'src="/assets/nav\.js(?:\?[^"\s]*)?"', f'src="/assets/nav.js?v={NAVIGATION_VERSION}"', source)
     for email in set(re.findall(r'mailto:([^?\"\s>]+)', source)):
-        source = source.replace(email, CONFIG['email'])
+        # The trade contact is separate from the site's general contact mailbox.
+        if email != glass_orders['horecaEmail']:
+            source = source.replace(email, CONFIG['email'])
     source = re.sub(r'<!-- BEGIN SEO -->.*?<!-- END SEO -->\s*', '', source, flags=re.S)
     source = re.sub(r'\s*<title>.*?</title>\s*', '\n', source, flags=re.S)
     source = re.sub(r'\s*<meta name="description"[^>]*>\s*', '\n', source)
