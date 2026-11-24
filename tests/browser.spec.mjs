@@ -40,7 +40,11 @@ test('enhanced navigation updates all head metadata, layout classes, hash and hi
   await page.locator('table a[href="/vinglass/phoenix-blanc/"]').click();
   await expect(page).toHaveURL(/\/vinglass\/phoenix-blanc\/$/);
   const schema = await page.locator('script[type="application/ld+json"]').textContent();
-  expect(JSON.parse(schema)['@graph'].some(n => n['@type'] === 'Product' && n.name === 'Sophienwald Phoenix Blanc')).toBe(true);
+  const breadcrumbs = JSON.parse(schema)['@graph'].find(node => node['@type'] === 'BreadcrumbList');
+  expect(breadcrumbs?.itemListElement.at(-1)).toMatchObject({
+    name: 'Phoenix Blanc',
+    item: 'https://trecalici.no/vinglass/phoenix-blanc/',
+  });
   await page.getByRole('link', { name: 'Spør oss om Phoenix Blanc' }).click();
   await expect(page).toHaveURL(/\/vinglass\/#contact-title$/);
   expect(await page.locator('#contact-title').evaluate(el => Math.abs(el.getBoundingClientRect().top) < 500)).toBe(true);

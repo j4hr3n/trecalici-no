@@ -73,6 +73,8 @@ for file in sorted(SITE.rglob('*.html')):
         check(page['name'] == title[0].text() and page['description'] == description[0], f'{path}: schema metadata parity')
         for entity in graph:
             check('aggregateRating' not in entity and 'offers' not in entity, f'{path}: unverified commercial claims')
+            if entity.get('@type') == 'Product':
+                check(any(entity.get(key) for key in ('offers', 'review', 'aggregateRating')), f'{path}: Product markup needs offers, review or aggregateRating')
         md = (SITE / PAGES[path]['markdown'].lstrip('/')).read_text()
         check(ORIGIN + path in md and CONFIG['email'] in md, f'{path}: Markdown identity')
         # Substantive public paragraphs must survive conversion, including disclosures.

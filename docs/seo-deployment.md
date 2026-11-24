@@ -22,7 +22,7 @@ Do not copy tokens into source or chat. Remote login is an account operation, no
 5. Check the Turnstile widget's allowed hostnames and the contact Worker's `ALLOWED_ORIGINS`. The public email change does not create a mailbox or alter `MAIL_TO`/`MAIL_FROM`. Confirm that `kontakt@trecalici.no` receives mail and configure the form recipient as intended. Test actual delivery with an owner-controlled address; CI never sends mail.
 6. Run `npm run verify:production`. It checks anonymous access first and fails clearly on an Access redirect, then checks HTML/Markdown, canonical URLs, headers, sitemap, robots, llms, 404s and www redirection.
 7. Run `node scripts/scan-agent-readiness.mjs`. Archive both the Content Site and All Checks reports, including date, origin and enabled checks. The scanner API is an external dependency and may change; use its UI if the endpoint changes. Never label a local check as the scanner's production score.
-8. Re-run PageSpeed Insights on the public domain. Inspect home, catalogue, a model detail page and producer page in Search Console's URL Inspection and the relevant structured-data validators. Product schema without offers/reviews is descriptive; it does not promise merchant or product rich-result eligibility.
+8. Re-run PageSpeed Insights on the public domain. Inspect home, catalogue, a model detail page and producer page in Search Console's URL Inspection and the relevant structured-data validators. Glass detail pages use `WebPage` and `BreadcrumbList` markup. Google requires a public offer, review or aggregate rating for product snippets.
 
 ## Search accounts and measurement
 

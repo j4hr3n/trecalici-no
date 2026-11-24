@@ -178,10 +178,6 @@ for path, meta in PAGES.items():
     if breadcrumb:
         page['breadcrumb'] = {'@id': breadcrumb['@id']}
         graph.append(breadcrumb)
-    if 'product' in meta:
-        p = meta['product']
-        page['mainEntity'] = {'@id': canonical + '#product'}
-        graph.append({'@type': 'Product', '@id': canonical + '#product', 'name': 'Sophienwald ' + p['name'], 'description': p['description'], 'url': canonical, 'image': ORIGIN + p['image'], 'brand': {'@type': 'Brand', 'name': 'Sophienwald'}, 'mpn': p['model'], 'color': p['color'], 'material': 'Krystallglass', 'height': {'@type': 'QuantitativeValue', 'value': int(p['heightSpec'].split()[0]), 'unitCode': 'MMT'}, 'sameAs': p['sourceUrl'], 'additionalProperty': [{'@type': 'PropertyValue', 'name': 'Volum', 'value': p['volume']}, {'@type': 'PropertyValue', 'name': 'Egnet for', 'value': ', '.join(p['suitedFor'])}]})
     if path in {'/produsenter/', '/vinglass/'}:
         items = [(p['name'], f'/vinglass/{p["slug"]}/') for p in GLASSES] if path == '/vinglass/' else [(n.text(), '/produsenter/#' + n.attrs['id']) for n in Tree(source).root.find_all('h2') if n.attrs.get('id')]
         elements = []

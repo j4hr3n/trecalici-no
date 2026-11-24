@@ -24,51 +24,51 @@
     "date": "2026-10-21"
   },
   "/vinglass/phoenix-champagne/": {
-    "sha256": "b0b41cc254b06ad78d7c0e9b0b3a0abbf7345d1e6086771506bb53aac7f8461f",
-    "date": "2026-10-21"
+    "sha256": "ce5ad3e180eafa1b153fd54f17b47498c96930b8b1c83029367246c3172e7733",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-blanc/": {
-    "sha256": "9556c54c91a681d71e6fda8f780011afbf8f9cfb584da978d2b8381cee9a2d58",
-    "date": "2026-10-21"
+    "sha256": "dc01138269d44efad476b3932a257bbc36f8630ae2a2c436d29547a0fda9b1be",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-bordeaux/": {
-    "sha256": "03fd2839db4e91076bd815febcb27e7200ad3a547fa035f36293e3c070beee04",
-    "date": "2026-10-21"
+    "sha256": "83eee0ead726122ee7fa81d399c8426e7e12707eed32537074688c605cc08350",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-bourgogne/": {
-    "sha256": "18450afbe05c6a57c73bb317cb06a0d064f50d35a09e549c4e6cc5eb075d8b6e",
-    "date": "2026-10-21"
+    "sha256": "09ec14ba1f338b2dc24c53029d01ccb85436df04e7b1d706ef93f1e2ca528dcc",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-midi/": {
-    "sha256": "2f9d31374d9f17f658f9d56f0ff65bc4ae7b88c97f122c2f0cda53c21c935c15",
-    "date": "2026-10-21"
+    "sha256": "3d09f8fd8790f3dde811bf28cbd832b7389807a25a8c73444eb00e53fef978b1",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-perlage/": {
-    "sha256": "385087cd3a3b0c3bb16e0a1f516f50bbf323bda7ac1a2b76503590cddc00f33d",
-    "date": "2026-10-21"
+    "sha256": "7783433a33ae7ebe30d50a57a0287ab9012960d8fb5fa7ab469f1af6faba612e",
+    "date": "2026-11-24"
   },
   "/vinglass/phoenix-twenty/": {
-    "sha256": "f3675bd2a2f309ae8381fd135c56924c7d1ae5843ab513867685197ab9325e73",
-    "date": "2026-10-21"
+    "sha256": "1d345a934820ba6babddc054251790bf21f8d67354e70714108fce2d394993bd",
+    "date": "2026-11-24"
   },
   "/vinglass/grand-cru-champagne/": {
-    "sha256": "0232cf3cb6eb0da6ccc3c218389b02d04b18afcd0218d3a4bfbccabf10105feb",
-    "date": "2026-10-21"
+    "sha256": "4825f1a36ceec5607ce3840f9812cd79bb9f1cd3299e8984af29409c5f162d63",
+    "date": "2026-11-24"
   },
   "/vinglass/grand-cru-bordeaux/": {
-    "sha256": "851aea6c583c617aea12900b49bad22da41d8b49205f5306a79ebd141fdca633",
-    "date": "2026-10-21"
+    "sha256": "4a4cf55d7e5a81cad21c6e8325f125051373bf50d7324128a0f32b859334f55a",
+    "date": "2026-11-24"
   },
   "/vinglass/grand-cru-bourgogne/": {
-    "sha256": "831bb91b49860a26b84cadce505ae6ae1f51ba2f4b62c271209593593f82e5f5",
-    "date": "2026-10-21"
+    "sha256": "f0a7cf2cefafb6982daa703a5f9986b1936ca73ba9e3e4b652d2b1610ca79923",
+    "date": "2026-11-24"
   },
   "/vinglass/dekanter/": {
-    "sha256": "c2ec6453c20ba8916fbf6e701728879c48c606205227f674f5ecb276d0e0b873",
-    "date": "2026-10-21"
+    "sha256": "0735cad1214375c1c484c1fafd18a7c74899cdc102e922f0cb475c80a95eaa5c",
+    "date": "2026-11-24"
   },
   "/vinglass/deep-black/": {
-    "sha256": "e73bb3ba36cc6ff13df710c88970d2e47f42a5d2f323fdfc997c5067b71d10d1",
-    "date": "2026-10-21"
+    "sha256": "17731a7c630dabac5395d982454c33984373373a6930d42ec6b4c703234ac393",
+    "date": "2026-11-24"
   }
 }
